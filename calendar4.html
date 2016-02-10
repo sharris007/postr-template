@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Mirrored from www.acdemo1.com/Project-P/calendar.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 18 Mar 2015 14:41:38 GMT -->
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<title>Project-P</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+
+ --><link rel="stylesheet" href="css/jquery-ui.css" media="all">
+<!-- <link href="css/font-awesome.css" rel="stylesheet" type="text/css" media="screen" /> -->
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+
+</head>
+		
+<body>
+
+    
+	
+    <div class="main-wrap">
+		<div class="content-wrap">	
+        	<div class="col-xs-12 col-sm-12 col-md-12 no-padd">
+              
+           		
+                <section class="content">
+                	<div class="container">
+                        <div class="col-xs-12 col-sm-7 col-md-7 no-padd section-caldr">
+                        	<div id="datepicker"></div>
+                        </div>
+						
+                    </div>
+                </section>   
+
+    		</div>
+		</div>	
+	</div>
+
+<script type="text/javascript" src="js/jquery.fancybox.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$('.popup-link').fancybox({
+		width : 650,
+		autoSize : false,
+		autoHeight : true,
+		scrolling : 'yes',
+		closeBtn : false,
+	});	
+	$( "#datepicker" ).datepicker({
+		showOtherMonths: false,
+        selectOtherMonths: true,
+		prevText: '<< Prev',
+    	nextText: 'Next >>',
+		monthNames: [ "Jan'", "Feb'", "Mar'", "Apr'",
+                   "May'", "Jun'", "Jul'", "Aug'", "Sep'",
+                   "Oct'", "Nov'", "Dec'" ],
+		monthNamesShort: [ "Jan", "Feb", "Mar", "Apr", "Maj", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dec" ],
+		dayNamesShort: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+    	dayNamesMin: ['S', 'M', 'T', 'W', 'T', 'F', 'S']
+	});
+});	
+
+</script>
+</body>
+
+<!-- Mirrored from www.acdemo1.com/Project-P/calendar.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 18 Mar 2015 14:41:42 GMT -->
+</html>

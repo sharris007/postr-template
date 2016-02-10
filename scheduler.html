@@ -1,0 +1,543 @@
+<html class="k-edge k-edge13 km-root km-phone"><head><link href="@Url.Content(" rel="apple-touch-icon" mobile="" content="" ~="" sizes="152x152" appicon76x76@2x.png")"=""><link href="@Url.Content(" rel="apple-touch-icon" mobile="" content="" ~="" sizes="120x120" appicon76x76@2x.png")"=""><link href="@Url.Content(" rel="apple-touch-icon" mobile="" content="" ~="" sizes="114x114" appicon72x72@2x.png")"=""><link href="@Url.Content(" rel="apple-touch-icon" mobile="" content="" ~="" sizes="76x76" appicon76x76.png")"=""><link href="@Url.Content(" rel="apple-touch-icon" appicon72x72.png")"="" mobile="" content="" ~="" sizes="72x72"><link href="@Url.Content(" rel="apple-touch-icon" appicon72x72.png")"="" mobile="" content="" ~=""><meta name="apple-mobile-web-app-capable" content="yes"> <meta name="apple-mobile-web-app-status-bar-style" content="black"> <meta name="msapplication-tap-highlight" content="no"> <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+    <title>Scheduler</title>
+    
+
+        <link href="//kendo.cdn.telerik.com/2016.1.112/styles/kendo.common-nova.min.css" rel="stylesheet">
+        <link href="//kendo.cdn.telerik.com/2016.1.112/styles/kendo.nova.min.css" rel="stylesheet">
+        <link href="//kendo.cdn.telerik.com/2016.1.112/styles/kendo.mobile.nova.min.css" rel="stylesheet">
+
+    <link href="/kendo-ui/content/shared/styles/console.css" rel="stylesheet">
+    <link href="/kendo-ui/content/mobile/examples.css" rel="stylesheet">
+
+        <script id="db_ip_api" src="http://api.demandbase.com/api/v2/ip.json?key=19e35a365b09a86adbf3f03e5845621e&amp;referrer=&amp;page=http%3A%2F%2Fdemos.telerik.com%2Fkendo-ui%2Fm%2Findex%23actionsheet%2Findex&amp;page_title=Inbox&amp;callback=Demandbase.IP._callback" async=""></script><script src="//s3.amazonaws.com/ki.js/24100/4Nr.js" type="text/javascript" async=""></script><script src="http://dnn506yrbagrg.cloudfront.net/pages/scripts/0013/8135.js?403939" type="text/javascript" async=""></script><script src="http://www.google-analytics.com/plugins/ua/linkid.js" type="text/javascript" async=""></script><script src="//img.en25.com/i/elqCfg.min.js" type="text/javascript" async=""></script><script id="demandbase_js_lib" src="http://scripts.demandbase.com/ddlrGAIa.min.js" async=""></script><script src="//connect.facebook.net/en_US/fbds.js" async=""></script><script src="http://www.google-analytics.com/analytics.js" type="text/javascript" async=""></script><script src="//www.googleadservices.com/pagead/conversion_async.js" type="text/javascript" async=""></script><script src="//www.googletagmanager.com/gtm.js?id=GTM-6X92" async=""></script><script src="//code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.js"></script>
+        <script src="//kendo.cdn.telerik.com/2016.1.112/js/jszip.min.js"></script>
+        <script src="//kendo.cdn.telerik.com/2016.1.112/js/kendo.all.min.js"></script>
+        <script src="//kendo.cdn.telerik.com/2016.1.112/js/kendo.timezones.min.js"></script>
+
+    <script src="/kendo-ui/content/shared/js/kendo-dojo.js"></script>
+
+    <script>
+        dojo.configuration = {
+            url: "http://dojo.telerik.com/",
+            cdnRoot: '//kendo.cdn.telerik.com/2016.1.112'
+        };
+
+        document.title = "";
+        var NAV_JSON_URL = "/kendo-ui/content/mobile-nav.json";
+        var navProduct = "online";
+        var product = "kendo-ui";
+
+        window.kendoCommonFile = "common-material";
+    </script>
+<script src="//d2oh4tlt9mrke9.cloudfront.net/Record/js/sessioncam.recorder.js" type="text/javascript"></script><script src="https://ws.sessioncam.com/Record/config.aspx?url=http%3A%2F%2Fdemos.telerik.com%2Fkendo-ui%2Fm%2Findex&amp;ae=1&amp;sse=1454181131189&amp;id=qitou1w133h4ggg53pnfjtjd" type="text/javascript"></script><style disabled="" id="ki-p1x-pr" type="text/css"></style><style disabled="" id="ki-p1x-p3" type="text/css"></style></head>
+
+<body class="km-widget km-nova km-7 km-m0 km-nova-dark km-web km-black-status-bar km-pane km-vertical" id="examples" style="touch-action: pan-y;" data-role="pane"><div class="km-widget km-view km-drawer km-left-drawer" id="about" style="display: none;" data-role="drawer" data-stretch="true" data-before-show="disableInSourceCode"><div class="km-header" data-role="header">
+            <div class="km-widget km-navbar" data-role="navbar"><div class="km-leftitem"><img id="logo" style="width: 13.306em; height: 1.008em" src="/kendo-ui/content/mobile/logos/kendo-ui.png" data-align="left"></div><div class="km-view-title km-show-title">
+                
+            </div></div>
+        </div><div class="km-content km-stretched-view" data-role="content">
+        
+
+        <div class="km-listview-wrapper"><ul class="km-widget km-listview km-list" id="external-resources" style="touch-action: pan-y;" data-role="listview">
+            <li><a class="km-listview-link" href="http://www.telerik.com/kendo-ui" data-role="listview-link" data-rel="external">Product Overview</a></li>
+            <li><a class="km-listview-link" href="http://www.telerik.com/purchase/kendo-ui" data-role="listview-link" data-rel="external">Pricing</a></li>
+            <li><a class="km-listview-link" href="http://www.telerik.com/download/kendo-ui" data-role="listview-link" data-rel="external">Try Now</a></li>
+        </ul></div>
+
+        
+    </div><div class="km-footer" data-role="footer">
+            <div class="km-listview-wrapper"><ul class="km-widget km-listview km-list" style="touch-action: pan-y;" data-role="listview">
+                <li><a class="km-listview-link" href="http://www.telerik.com/company/terms-of-use" data-role="listview-link" data-rel="external">Terms of Use</a></li>
+                <li><a class="km-listview-link" href="http://www.telerik.com/company/product-improvement-program" data-role="listview-link" data-rel="external">Product Improvement Program</a></li>
+                <li><a class="km-listview-link" href="http://www.telerik.com/company/offices" data-role="listview-link" data-rel="external">Contact Us</a></li>
+            </ul></div>
+        </div></div>
+      <!-- Google Tag Manager -->
+  <noscript>
+    &lt;iframe src="//www.googletagmanager.com/ns.html?id=GTM-6X92" height="0" width="0" style="display: none; visibility: hidden"&gt;&lt;/iframe&gt;
+  </noscript>
+  <script>(function(w, d, s, l, i) { w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f); })(window, document, 'script', 'dataLayer', 'GTM-6X92');</script>
+  <!-- End Google Tag Manager -->
+
+
+    <div class="km-widget km-view" id="index" style="display: none; transform-origin: left top 0px;" data-role="view" data-use-native-scrolling="true" data-init="initSearch" data-show="nullCurrentExample" data-layout="" data-title="Kendo UI" data-url="/"><header class="km-header" data-role="header">
+            <div class="km-accent km-widget km-navbar" id="normal" data-role="navbar"><div class="km-rightitem"><a class="km-widget km-button" style="touch-action: pan-y;" data-role="button" data-click="showSearch" data-icon="search" data-align="right" data-click-on="down" data-navigate-on-press="true"><span class="km-icon km-search km-notext"></span></a></div><div class="km-leftitem"><a class="km-widget km-button" style="touch-action: pan-y;" href="#about" data-role="button" data-icon="drawer-icon" data-rel="drawer" data-align="left"><span class="km-icon km-drawer-icon km-notext"></span></a></div><div class="km-view-title">
+                
+                <span data-role="view-title">Kendo UI</span>
+                <span class="km-view-subtitle">Mobile Demos and Sample Applications</span>
+                
+            </div></div>
+            <div class="navbar-hidden km-widget km-navbar" id="search" data-role="navbar"><div class="km-rightitem"><div id="demos-search-container" data-align="right">
+                    <input id="demos-search" type="search">
+                </div></div><div class="km-view-title km-show-title km-fill-title">
+                
+            </div></div>
+        </header><div class="km-content km-widget km-scroll-wrapper" style="overflow: hidden; touch-action: pan-y;" data-role="content"><div class="km-scroll-header"></div><div class="km-scroll-container" style="transform: translate3d(0px, -3299px, 0px) scale(1); transform-origin: left top 0px;">
+        
+
+        <div class="km-listview-wrapper"><ul class="main-menu km-widget km-listview km-listgroup" style="touch-action: pan-y;" data-role="listview" data-header-template="header-template" data-template="nav-template" data-source="navDataSource"><li class="km-group-container"><div class="km-group-title"><div class="km-text">
+                <span class="km-icon km-ActionSheet"></span> ActionSheet
+            </div></div><ul class="km-list"><li data-uid="956cff2c-eca1-49a2-a374-a80ca9abfce6">
+                <a class="km-listview-link" href="actionsheet/index" data-role="listview-link">Basic usage </a>
+            </li></ul></li><li class="km-group-container"><div class="km-group-title"><div class="km-text">
+                <span class="km-icon km-Application"></span> Application
+            </div></div><ul class="km-list"><li data-uid="02a10067-f235-4b44-ab2c-2710d9f7343e">
+                <a class="km-listview-link" href="application/loadingpopup" data-role="listview-link">Loading popup </a>
+            </li><li data-uid="c76025d7-1ecc-4b15-86f8-f391dd39f955">
+                <a class="km-listview-link" href="application/transitions" data-role="listview-link">View transitions </a>
+            </li></ul></li><li class="km-group-container"><div class="km-group-title"><div class="km-text">
+                <span class="km-icon km-Button"></span> Button
+            </div></div><ul class="km-list"><li data-uid="449daf13-8036-491f-aaa4-befa66182dcc">
+                <a class="km-listview-link" href="mobile-button/index" data-role="listview-link">Basic usage </a>
+            </li><li data-uid="afae77bd-3f23-4be8-b383-9782ff936473">
+                <a class="km-listview-link" href="mobile-button/badges" data-role="listview-link">Badges </a>
+            </li><li data-uid="00579426-21f3-44a6-9d32-e9cbfb6811d8">
+                <a class="km-listview-link" href="mobile-button/events" data-role="listview-link">Events </a>
+            </li><li data-uid="e9277a51-c513-441e-a8cd-2885fab5ada0">
+                <a class="km-listview-link" href="mobile-button/sizes" data-role="listview-link">Sizes <span class="km-badge">NEW</span></a>
+            </li><li data-uid="621337a0-09b5-4b1a-b9ce-59097e15d263">
+                <a class="km-listview-link" href="mobile-button/icons" data-role="listview-link">Icons <span class="km-badge">NEW</span></a>
+            </li><li data-uid="7e139641-db63-4f21-8fb2-6cd2a8ab91ba">
+                <a class="km-listview-link" href="mobile-button/mvvm" data-role="listview-link">MVVM </a>
+            </li></ul></li><li class="km-group-container"><div class="km-group-title"><div class="km-text">
+                <span class="km-icon km-ButtonGroup"></span> ButtonGroup
+            </div></div><ul class="km-list"><li data-uid="9fe26a12-d53c-4685-b91d-380ea476d643">
+                <a class="km-listview-link" href="buttongroup/mobile" data-role="listview-link">Basic usage </a>
+            </li><li data-uid="524265a2-b7f7-46f5-98f6-6c86ee461088">
+                <a class="km-listview-link" href="buttongroup/navbar" data-role="listview-link">NavBar usage </a>
+            </li><li data-uid="d848b902-f9e1-4470-b197-c67f8a457187">
+                <a class="km-listview-link" href="buttongroup/badges" data-role="listview-link">Badges </a>
+            </li><li data-uid="bfd29dce-a159-4eee-b99c-be4dbb95c3aa">
+                <a class="km-listview-link" href="buttongroup/events" data-role="listview-link">Events </a>
+            </li><li data-uid="e3c34133-4aeb-4594-a9ed-1dad3762223d">
+                <a class="km-listview-link" href="buttongroup/sizes" data-role="listview-link">Sizes <span class="km-badge">NEW</span></a>
+            </li><li data-uid="48a82eb1-747e-48d9-a9a8-45f055b694c3">
+                <a class="km-listview-link" href="buttongroup/icons" data-role="listview-link">Icons <span class="km-badge">NEW</span></a>
+            </li><li data-uid="da9112a9-8037-4a07-b87f-559e086622e6">
+                <a class="km-listview-link" href="buttongroup/mvvm" data-role="listview-link">MVVM </a>
+            </li></ul></li><li class="km-group-container"><div class="km-group-title"><div class="km-text">
+                <span class="km-icon km-Collapsilble"></span> Collapsilble
+            </div></div><ul class="km-list"><li data-uid="ef204409-ca06-498b-a1c8-b035473c007d">
+                <a class="km-listview-link" href="collapsible/index" data-role="listview-link">Basic usage </a>
+            </li><li data-uid="1a130cfe-5fab-445b-97fd-dc44ce4d126b">
+                <a class="km-listview-link" href="collapsible/nested" data-role="listview-link">Nested collapsibles </a>
+            </li><li data-uid="49a5cf2e-2b3a-4e6c-b6ca-42098eba7fcc">
+                <a class="km-listview-link" href="collapsible/events" data-role="listview-link">Events </a>
+            </li><li data-uid="ce96fc2a-396d-4dd5-9815-194e98ccb818">
+                <a class="km-listview-link" href="collapsible/mvvm" data-role="listview-link">MVVM </a>
+            </li><li data-uid="8738e307-186b-44db-991d-264f95b1e6a9">
+                <a class="km-listview-link" href="collapsible/scenario" data-role="listview-link">Application scenario </a>
+            </li></ul></li><li class="km-group-container"><div class="km-group-title"><div class="km-text">
+                <span class="km-icon km-Drawer"></span> Drawer
+            </div></div><ul class="km-list"><li data-uid="afc3b8f5-b737-4957-b931-0282374f1ab9">
+                <a class="km-listview-link" href="drawer/index" data-role="listview-link">Basic usage </a>
+            </li><li data-uid="79147500-4c8b-4811-a4ca-266078b942d0">
+                <a class="km-listview-link" href="drawer/two-way-drawers" data-role="listview-link">Two way drawers <span class="km-badge">NEW</span></a>
+            </li></ul></li><li class="km-group-container"><div class="km-group-title"><div class="km-text">
+                <span class="km-icon km-Forms"></span> Forms
+            </div></div><ul class="km-list"><li data-uid="3f6c61af-9a9f-427c-9eae-f5bd2538efe6">
+                <a class="km-listview-link" href="mobile-forms/index" data-role="listview-link">Overview <span class="km-badge">NEW</span></a>
+            </li><li data-uid="c35419fd-75d0-46aa-b68b-5f23f959870c">
+                <a class="km-listview-link" href="mobile-forms/checkboxes" data-role="listview-link">Checks and Radios <span class="km-badge">NEW</span></a>
+            </li><li data-uid="d7ba7984-b8fa-48b9-a2a5-a6f0689e1dd7">
+                <a class="km-listview-link" href="mobile-forms/types" data-role="listview-link">Form types </a>
+            </li></ul></li><li class="km-group-container"><div class="km-group-title"><div class="km-text">
+                <span class="km-icon km-Grid"></span> Grid
+            </div></div><ul class="km-list"><li data-uid="2dec3593-6278-409b-b8fb-49f86c88eba2">
+                <a class="km-listview-link" href="grid/adaptive" data-role="listview-link">Adaptive Usage </a>
+            </li></ul></li><li class="km-group-container"><div class="km-group-title"><div class="km-text">
+                <span class="km-icon km-ListView"></span> ListView
+            </div></div><ul class="km-list"><li data-uid="24781125-d64b-43e8-92db-99c086b7adfc">
+                <a class="km-listview-link" href="mobile-listview/index" data-role="listview-link">Basic usage </a>
+            </li><li data-uid="e8388964-7854-4aba-a0bc-9f8e1be661c8">
+                <a class="km-listview-link" href="mobile-listview/detailbuttons" data-role="listview-link">Detail Buttons </a>
+            </li><li data-uid="0be9d5c1-d28f-4ddc-ab32-29f7b0d1dd93">
+                <a class="km-listview-link" href="mobile-listview/databinding" data-role="listview-link">Data binding </a>
+            </li><li data-uid="b356c9a3-7f21-47da-a340-d826fd4532a0">
+                <a class="km-listview-link" href="mobile-listview/hierarchical-databinding" data-role="listview-link">Hierarchical data binding </a>
+            </li><li data-uid="2cb397b6-5af3-4877-85e5-5a49cc8460f4">
+                <a class="km-listview-link" href="mobile-listview/pull-to-refresh" data-role="listview-link">Pull to refresh </a>
+            </li><li data-uid="cabfef18-f179-4bea-b545-7dd90189beb4">
+                <a class="km-listview-link" href="mobile-listview/endless-scrolling" data-role="listview-link">Endless scrolling </a>
+            </li><li data-uid="4836bed7-e9e9-4b70-be7f-fed751ee2a93">
+                <a class="km-listview-link" href="mobile-listview/pull-with-endless" data-role="listview-link">Pull to refresh + Endless scrolling </a>
+            </li><li data-uid="ce0d2c47-baf8-4ca4-98d1-336b477f04f2">
+                <a class="km-listview-link" href="mobile-listview/press-to-load-more" data-role="listview-link">Press to load more </a>
+            </li><li data-uid="ac6dc1b0-b6a6-4df0-8f65-2ccbe2c3594d">
+                <a class="km-listview-link" href="mobile-listview/fixedheaders" data-role="listview-link">Fixed Headers </a>
+            </li><li data-uid="b8a3baaf-4035-4793-aabe-e92e0d62350f">
+                <a class="km-listview-link" href="mobile-listview/templates" data-role="listview-link">Custom templates </a>
+            </li><li data-uid="a0a5a844-9c72-45dd-86bc-c81e6e97a39b">
+                <a class="km-listview-link" href="mobile-listview/editing" data-role="listview-link">Editing </a>
+            </li><li data-uid="2efc6b4e-fc7a-4e36-bc11-7842bd2a7e84">
+                <a class="km-listview-link" href="mobile-listview/filtering" data-role="listview-link">Filtering </a>
+            </li><li data-uid="43708979-4b03-4478-b78e-07fb0eb0834d">
+                <a class="km-listview-link" href="mobile-listview/local-virtualization" data-role="listview-link">Local data virtualization </a>
+            </li><li data-uid="08481373-fd26-46ea-94df-0d81652a1bcd">
+                <a class="km-listview-link" href="mobile-listview/mvvm" data-role="listview-link">MVVM </a>
+            </li><li data-uid="0abd039b-84e0-4641-8991-1b79813cf658">
+                <a class="km-listview-link" href="mobile-listview/responsive-images" data-role="listview-link">Responsive images </a>
+            </li></ul></li><li class="km-group-container"><div class="km-group-title"><div class="km-text">
+                <span class="km-icon km-ModalView"></span> ModalView
+            </div></div><ul class="km-list"><li data-uid="d4087835-6d75-4458-9692-e6fd6c69cf34">
+                <a class="km-listview-link" href="modalview/index" data-role="listview-link">Basic usage </a>
+            </li></ul></li><li class="km-group-container"><div class="km-group-title"><div class="km-text">
+                <span class="km-icon km-NavBar"></span> NavBar
+            </div></div><ul class="km-list"><li data-uid="1a9b6e00-f857-4c67-b118-dc1a1b59fa00">
+                <a class="km-listview-link" href="navbar/index" data-role="listview-link">Basic usage </a>
+            </li><li data-uid="f2ef800d-aa14-4a31-a8e1-c36dcae58351">
+                <a class="km-listview-link" href="navbar/appearance" data-role="listview-link">Customizing appearance <span class="km-badge">NEW</span></a>
+            </li><li data-uid="4aef8900-73d1-4d34-90f0-1b98813458ed">
+                <a class="km-listview-link" href="navbar/adaptive-toolbar" data-role="listview-link">ToolBar as ActionBar </a>
+            </li></ul></li><li class="km-group-container"><div class="km-group-title"><div class="km-text">
+                <span class="km-icon km-PopOver"></span> PopOver
+            </div></div><ul class="km-list"><li data-uid="5dfd6d63-08a6-45c1-aa00-d2eb484cb7d5">
+                <a class="km-listview-link" href="popover/index" data-role="listview-link">Basic usage </a>
+            </li></ul></li><li class="km-group-container"><div class="km-group-title"><div class="km-text">
+                <span class="km-icon km-Scheduler"></span> Scheduler
+            </div></div><ul class="km-list"><li data-uid="3d9cd87d-8c41-4234-875a-74866eed3438">
+                <a class="km-listview-link" href="scheduler/adaptive" data-role="listview-link">Adaptive Usage </a>
+            </li></ul></li><li class="km-group-container"><div class="km-group-title"><div class="km-text">
+                <span class="km-icon km-Scroller"></span> Scroller
+            </div></div><ul class="km-list"><li data-uid="5eed140a-1d9a-40e0-b6b0-9d226768f632">
+                <a class="km-listview-link" href="scroller/index" data-role="listview-link">Basic usage </a>
+            </li><li data-uid="f26a7a5d-375c-4c55-858d-caa14d506abb">
+                <a class="km-listview-link" href="scroller/pull-to-refresh" data-role="listview-link">Pull to refresh </a>
+            </li></ul></li><li class="km-group-container"><div class="km-group-title"><div class="km-text">
+                <span class="km-icon km-ScrollView"></span> ScrollView
+            </div></div><ul class="km-list"><li data-uid="05a88138-2325-4d47-a5ce-497b1d5bc29d">
+                <a class="km-listview-link" href="scrollview/mobile" data-role="listview-link">Basic usage <span class="km-badge">NEW</span></a>
+            </li><li data-uid="c14c9a1c-5c99-4a10-aadf-0c492abb4b42">
+                <a class="km-listview-link" href="scrollview/databinding" data-role="listview-link">Data binding </a>
+            </li><li data-uid="f6fc3075-6921-48ed-9b78-45e7fe48d083">
+                <a class="km-listview-link" href="scrollview/custom-template" data-role="listview-link">Custom template </a>
+            </li></ul></li><li class="km-group-container"><div class="km-group-title"><div class="km-text">
+                <span class="km-icon km-SplitView"></span> SplitView
+            </div></div><ul class="km-list"><li data-uid="b7caf6a6-df86-4f71-bcdf-ae952c85b55d">
+                <a class="km-listview-link" href="splitview/index" data-role="listview-link">Basic Usage </a>
+            </li><li data-uid="feaf9da5-15b1-4f35-9328-e3563e82b602">
+                <a class="km-listview-link" href="splitview/appearance" data-role="listview-link">Customizing appearance </a>
+            </li></ul></li><li class="km-group-container"><div class="km-group-title"><div class="km-text">
+                <span class="km-icon km-Styling"></span> Styling
+            </div></div><ul class="km-list"><li data-uid="f131786d-cccc-4bd9-b26d-9d32a3bce05c">
+                <a class="km-listview-link" href="mobile-styling/index" data-role="listview-link">Typography <span class="km-badge">NEW</span></a>
+            </li><li data-uid="1e2e2c37-1c3e-48c5-bc38-02a7534f1d37">
+                <a class="km-listview-link" href="mobile-styling/icons" data-role="listview-link">Icons <span class="km-badge">NEW</span></a>
+            </li></ul></li><li class="km-group-container"><div class="km-group-title"><div class="km-text">
+                <span class="km-icon km-Switch"></span> Switch
+            </div></div><ul class="km-list"><li data-uid="e34e9b90-daa2-4e2e-b334-b21224160734">
+                <a class="km-listview-link" href="switch/mobile" data-role="listview-link">Basic usage </a>
+            </li><li data-uid="a768c9fb-f39e-4fee-b36a-c77ee7f45af3">
+                <a class="km-listview-link" href="switch/events" data-role="listview-link">Events </a>
+            </li><li data-uid="6cdda613-6f5c-4264-8001-d8fe56484fec">
+                <a class="km-listview-link" href="switch/mvvm" data-role="listview-link">MVVM </a>
+            </li></ul></li><li class="km-group-container"><div class="km-group-title"><div class="km-text">
+                <span class="km-icon km-TabStrip"></span> TabStrip
+            </div></div><ul class="km-list"><li data-uid="591e757c-f76d-4280-b17d-0a89b6334252">
+                <a class="km-listview-link" href="mobile-tabstrip/index" data-role="listview-link">Basic usage </a>
+            </li><li data-uid="8b85cef4-ba08-4d5f-b698-054b4f0ffcee">
+                <a class="km-listview-link" href="mobile-tabstrip/badges" data-role="listview-link">Badges <span class="km-badge">NEW</span></a>
+            </li></ul></li><li class="km-group-container"><div class="km-group-title"><div class="km-text">
+                <span class="km-icon km-Touch Events"></span> Touch Events
+            </div></div><ul class="km-list"><li data-uid="7191a0dd-4fea-4e6f-94ff-2b78271e6e7f">
+                <a class="km-listview-link" href="touchevents/mobile" data-role="listview-link">Touch Events </a>
+            </li></ul></li><li class="km-group-container"><div class="km-group-title"><div class="km-text">
+                <span class="km-icon km-View"></span> View
+            </div></div><ul class="km-list"><li data-uid="29280ce2-e189-490d-8beb-7a73704d93d1">
+                <a class="km-listview-link" href="mobile-view/index" data-role="listview-link">Overview </a>
+            </li><li data-uid="b42b6c19-1817-42f8-b769-675eddc912dc">
+                <a class="km-listview-link" href="mobile-view/zoomable" data-role="listview-link">Zoomable View </a>
+            </li></ul></li></ul></div>
+    </div><div class="km-touch-scrollbar km-horizontal-scrollbar" style="width: 1422px; display: none; opacity: 0; transform-origin: left top 0px;"></div><div class="km-touch-scrollbar km-vertical-scrollbar" style="height: 17px; visibility: visible; opacity: 0; transform: translate3d(0px, 194px, 0px) scale(1); transform-origin: left top 0px;"></div></div><div style="left: 0px; top: 0px; width: 100%; height: 100%; display: none; position: absolute; z-index: 20000;"></div></div>
+
+    
+
+    <div id="source-code-view" style="display: none;" data-role="view" data-use-native-scrolling="true" data-show="showSourceCode" data-title="Source code" data-transition="fade" data-stretch="true" data-persist="true">
+       <header data-role="header">
+            <div data-role="navbar">
+                <span data-role="view-title"></span>
+                <a data-role="button" data-click="openDojo" data-align="right">Edit</a>
+                <a href="#:back" data-role="button" data-icon="close" data-align="right"></a>
+            </div>
+        </header>
+
+        <div id="source-code-container"></div>
+    </div>
+
+    
+
+    <script src="/kendo-ui/content/shared/js/example-datasources.js"></script>
+    <script src="/kendo-ui/content/shared/js/mobile-examples.js"></script>
+    <script src="/kendo-ui/content/shared/js/console.js"></script>
+    <script src="/kendo-ui/content/shared/js/prettify.js"></script>
+
+
+<div class="km-loader km-widget" style="display: none;" data-role="loader"><span class="km-loading km-spin"></span><span class="km-loading-left"></span><span class="km-loading-right"></span><h1>Loading...</h1></div><script id="inboxItem" type="script/x-kendo-template">
+    <a class="reply km-primary km-button-right"
+    data-role="button"
+    data-rel="actionsheet"
+    href="\\#inboxActions"
+    data-actionsheet-context="#:ID#">Reply</a>
+    <h6>#: From # <span class="disabled">#: Time#</span></h6>
+    <h4>#: Subject#</h4>
+    <p>#: Text#</p>
+</script><script>
+    var inbox = [
+        {
+            ID: 1,
+            From: "John Doe",
+            Subject: "Monday meeting",
+            Text: "Hi Tom, Since Monday I'll be out of office, I'm rescheduling the meeting for Tuesday.",
+            Time: "07:56"
+        },
+        {
+            ID: 2,
+            From: "Sarah Connor",
+            Subject: "Regarding org chart changes",
+            Text: "Tom, I checked the new org chart last night and I have some reservations about it...",
+            Time: "08:22"
+        },
+        {
+            ID: 3,
+            From: "Jane Parker",
+            Subject: "Your Costume is ready",
+            Text: "Hi mr. Sawyer, I'm sorry for the delay, your Halloween costume is ready. The bears...",
+            Time: "10:14"
+        },
+        {
+            ID: 4,
+            From: "Joe Harper",
+            Subject: "I'm sorry, Tom",
+            Text: "Hi Tom, my aunt comes for a visit this Saturday, so I can't come back to St. Pete...",
+            Time: "10:14"
+        },
+        {
+            ID: 5,
+            From: "Becky Thatcher",
+            Subject: "Out tonight?",
+            Text: "Honey, wanna go out tonight to grab some chicken? My weekly vouchers for cooking...",
+            Time: "10:14"
+        }
+    ];
+
+    function onOpen(e) {
+        this.element.find(".km-actionsheet-title").text(e.target.next().text());
+    }
+
+    function reply(e) {
+        $("#actionResult").html("Replying to message #" + e.context);
+    }
+
+    function replyAll(e) {
+        $("#actionResult").html("Replying to all in message #" + e.context);
+    }
+
+    function archive(e) {
+        $("#actionResult").html("Archiving message #" + e.context);
+    }
+</script><div style="display: none; visibility: hidden;"><script type="text/javascript">setTimeout(function(){var a=document.createElement("script"),b=document.getElementsByTagName("script")[0];a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0013/8135.js?"+Math.floor((new Date).getTime()/36E5);a.async=!0;a.type="text/javascript";b.parentNode.insertBefore(a,b)},1);</script></div><div style="display: none; visibility: hidden;"><script>(function(){var a=window._fbq||(window._fbq=[]);if(!a.loaded){var b=document.createElement("script");b.async=!0;b.src="//connect.facebook.net/en_US/fbds.js";var c=document.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c);a.loaded=!0}a.push(["addPixelId","1444093252502226"])})();window._fbq=window._fbq||[];window._fbq.push(["track","PixelInitialized",{}]);</script></div><script src="//cdn.optimizely.com/js/229097002.js" type="text/javascript"></script><div style="display: none; visibility: hidden;"><script type="text/javascript">var _kiq=_kiq||[];(function(){setTimeout(function(){var a=document,b=a.getElementsByTagName("script")[0],a=a.createElement("script");a.type="text/javascript";a.async=!0;a.src="//s3.amazonaws.com/ki.js/24100/4Nr.js";b.parentNode.insertBefore(a,b)},1)})();</script></div><script type="text/javascript">var scRec=document.createElement("SCRIPT");scRec.type="text/javascript";scRec.src="//d2oh4tlt9mrke9.cloudfront.net/Record/js/sessioncam.recorder.js";document.getElementsByTagName("head")[0].appendChild(scRec);</script><script type="text/javascript">(function(){function g(){if(window.dataLayer)for(var a=0;a<window.dataLayer.length;a++){var b=window.dataLayer[a],c;a:{c=document.cookie.split(";");for(var e="gauuid",f=0;f<c.length;f++){for(var d=c[f];" "===d.charAt(0);)d=d.substring(1,d.length);if(0===d.indexOf(e)){c=d.substring(e.length,d.length).replace("\x3d","");break a}}c=null}if(b.telerikId&&c&&h()){k.post(l,new m({telerikId:b.telerikId,uniqueId:c}));break}}}function h(){var a=new Date;if(null===localStorage.getItem(e))return localStorage.setItem(e,
+a.toISOString()),!0;var b=Date.parse(localStorage.getItem(e));if(isNaN(b))return!1;b=new Date(b);return b.setTime(b.getTime()+6048E5)<a?(localStorage.setItem(e,a.toISOString()),!0):!1}if(window.jQuery){var k=window.jQuery,l=window.location.origin+"/services/callhomeservice/api/userlogged",e="call-home-client-key-user-logged",m=function(a){this.telerikId=a.telerikId;this.uniqueId=a.uniqueId};k(document).ready(function(){g()});window.__callhome__||(window.__callhome__={});window.__callhome__.verify=
+h;window.__callhome__.init=g}})();</script><script type="text/javascript">function createCookie(a,c,b){if(b){var d=new Date;d.setTime(d.getTime()+864E5*b);b="; expires\x3d"+d.toGMTString()}else b="";document.cookie=a+"\x3d"+c+b+"; path\x3d/"}function hasCookie(a){return a?(new RegExp("(?:^|;\\s*)"+encodeURIComponent(a).replace(/[\-\.\+\*]/g,"\\$\x26")+"\\s*\\\x3d")).test(document.cookie):!1}
+function removeCookie(a,c,b){if(!hasCookie(a))return!1;document.cookie=encodeURIComponent(a)+"\x3d; expires\x3dThu, 01 Jan 1970 00:00:00 GMT"+(b?"; domain\x3d"+b:"")+(c?"; path\x3d"+c:"");return!0}function AmazonTestImageIsLoaded(a){a.onload=null;createCookie("amazonImageLoaded","true")};</script>
+
+<img id="AmazonImageToLoad" style="display: none;" onload="AmazonTestImageIsLoaded(this)" alt="" src="//telerik.s3.amazonaws.com/amazonDotTest.gif"><script type="text/javascript">(function(a,b,c,d,e){a=b.createElement(c);b=b.getElementsByTagName(c)[0];a.async=1;a.id=e;a.src=("https:"==document.location.protocol?"https://":"http://")+d;b.parentNode.insertBefore(a,b)})(window,document,"script","scripts.demandbase.com/ddlrGAIa.min.js","demandbase_js_lib");</script><script type="text/javascript">var REDIRECT_COOKIE_NAME="optimizelyRedirect";redirect={};integrator={getRelevantExperimentIds:function(){var a=window.optimizely.data.state.activeExperiments,a=a||[],c=redirect.getRedirectVariationId();c&&a.push(integrator.getExperimentId(c));return a},getExperimentId:function(a){var c,b;for(b in optimizely.data.experiments){var d=optimizely.data.experiments[b];if(-1<d.variation_ids.indexOf(a)){c=b;break}}return c}};redirect.getRedirectCookie=function(){return cookie.get(REDIRECT_COOKIE_NAME)};
+redirect.getRedirectVariationId=function(){redirect.initializeRedirectVariationId();return redirect.variationId};redirect.initializeRedirectVariationId=function(){var a=redirect.getRedirectCookie()||"|";redirect.variationId=a.split("|")[0]};
+window.cookie={get:function(a){return a?decodeURIComponent(document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*"+encodeURIComponent(a).replace(/[\-\.\+\*]/g,"\\$\x26")+"\\s*\\\x3d\\s*([^;]*).*$)|^.*$"),"$1"))||null:null},set:function(a,c,b,d,f,g){if(!a||/^(?:expires|max\-age|path|domain|secure)$/i.test(a))return!1;var e="";if(b)switch(b.constructor){case Number:e=Infinity===b?"; expires\x3dFri, 31 Dec 9999 23:59:59 GMT":"; max-age\x3d"+b;break;case String:e="; expires\x3d"+b;break;case Date:e="; expires\x3d"+
+b.toUTCString()}document.cookie=encodeURIComponent(a)+"\x3d"+encodeURIComponent(c)+e+(f?"; domain\x3d"+f:"")+(d?"; path\x3d"+d:"")+(g?"; secure":"");return!0},remove:function(a,c,b){if(!this.has(a))return!1;document.cookie=encodeURIComponent(a)+"\x3d; expires\x3dThu, 01 Jan 1970 00:00:00 GMT"+(b?"; domain\x3d"+b:"")+(c?"; path\x3d"+c:"");return!0},has:function(a){return a?(new RegExp("(?:^|;\\s*)"+encodeURIComponent(a).replace(/[\-\.\+\*]/g,"\\$\x26")+"\\s*\\\x3d")).test(document.cookie):!1},keys:function(){for(var a=
+document.cookie.replace(/((?:^|\s*;)[^\=]+)(?=;|$)|^\s*|\s*(?:\=[^;]*)?(?:\1|$)/g,"").split(/\s*(?:\=[^;]*)?;\s*/),c=a.length,b=0;b<c;b++)a[b]=decodeURIComponent(a[b]);return a}};var dataLayer=dataLayer||[];
+(function(a){if(a){var c={},b;for(b in integrator.getRelevantExperimentIds()){var d=integrator.getRelevantExperimentIds()[b];experimentName="(experiment "+d+") "+a.allExperiments[d].name;variationName="(variation "+a.variationIdsMap[d]+") "+a.variationNamesMap[d];c[experimentName]=variationName}a={Optimizely_exps:JSON.stringify(c)};window.dataLayer.push(a);try{0<integrator.getRelevantExperimentIds().length&&window.dataLayer.push({event:"optimizely"})}catch(f){}}})(window.optimizely);</script><script type="text/javascript">(function(d,c,b){function e(a,c,b){a.addEventListener?a.addEventListener(c,b,!1):a.attachEvent&&a.attachEvent("on"+c,b)}function f(h,c){var b=h.getAttribute(c).split(",");for(a=b.length-1;0<=a;a--)b[a]=b[a].replace(/^[ \s]+|[ \s]+$/g,"");return b}function k(a){a=f(a.currentTarget||a.originalEvent.srcElement,"data-gtm-event");g.push({event:"virtualEvent",eventCategory:a[0]||"",eventAction:a[1]||"",eventLabel:a[2]||""})}function l(a){a=f(a.currentTarget||a.originalEvent.srcElement,"data-gtm-pageview");
+g.push({event:"virtualPageview",vpv:a[0]})}var a,g=d.dataLayer||[];if(c.querySelectorAll)d=c.querySelectorAll("[data-gtm-event]"),c=c.querySelectorAll("[data-gtm-pageview]");else for(b=c.body.getElementsByTagName("*"),d=[],c=[],a=b.length-1;0<=a;a--)if(null!==b[a].getAttribute("data-gtm-event")||null!==b[a].getAttribute("data-gtm-pageview"))null!==b[a].getAttribute("data-gtm-event")&&d.push(b[a]),null!==b[a].getAttribute("data-gtm-pageview")&&c.push(b[a]);for(a=d.length-1;0<=a;a--)e(d[a],"click",
+k);for(a=c.length-1;0<=a;a--)e(c[a],"click",l)})(window,document);</script><script type="text/javascript">var _elqQ=_elqQ||[];_elqQ.push(["elqSetSiteId","1325"]);_elqQ.push(["elqTrackPageView"]);(function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="//img.en25.com/i/elqCfg.min.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})();</script><script type="text/javascript">(function(){function g(){if(window.dataLayer)for(var a=0;a<window.dataLayer.length;a++){var b=window.dataLayer[a],c;a:{c=document.cookie.split(";");for(var e="gauuid",f=0;f<c.length;f++){for(var d=c[f];" "===d.charAt(0);)d=d.substring(1,d.length);if(0===d.indexOf(e)){c=d.substring(e.length,d.length).replace("\x3d","");break a}}c=null}if(b.telerikId&&c&&h()){k.post(l,new m({telerikId:b.telerikId,uniqueId:c}));break}}}function h(){var a=new Date;if(null===localStorage.getItem(e))return localStorage.setItem(e,
+a.toISOString()),!0;var b=Date.parse(localStorage.getItem(e));if(isNaN(b))return!1;b=new Date(b);return b.setTime(b.getTime()+6048E5)<a?(localStorage.setItem(e,a.toISOString()),!0):!1}if(window.jQuery){var k=window.jQuery,l=window.location.origin+"/services/callhomeservice/api/userlogged",e="call-home-client-key-user-logged",m=function(a){this.telerikId=a.telerikId;this.uniqueId=a.uniqueId};k(document).ready(function(){g()});window.__callhome__||(window.__callhome__={});window.__callhome__.verify=
+h;window.__callhome__.init=g}})();</script><iframe width="0" height="0" id="db_ect" src="http://b.company-target.com/ect.html.gz?parent=http://demos.telerik.com/kendo-ui/m/index#actionsheet/index" style="display: none;"></iframe><script type="text/javascript">(function(){function g(){if(window.dataLayer)for(var a=0;a<window.dataLayer.length;a++){var b=window.dataLayer[a],c;a:{c=document.cookie.split(";");for(var e="gauuid",f=0;f<c.length;f++){for(var d=c[f];" "===d.charAt(0);)d=d.substring(1,d.length);if(0===d.indexOf(e)){c=d.substring(e.length,d.length).replace("\x3d","");break a}}c=null}if(b.telerikId&&c&&h()){k.post(l,new m({telerikId:b.telerikId,uniqueId:c}));break}}}function h(){var a=new Date;if(null===localStorage.getItem(e))return localStorage.setItem(e,
+a.toISOString()),!0;var b=Date.parse(localStorage.getItem(e));if(isNaN(b))return!1;b=new Date(b);return b.setTime(b.getTime()+6048E5)<a?(localStorage.setItem(e,a.toISOString()),!0):!1}if(window.jQuery){var k=window.jQuery,l=window.location.origin+"/services/callhomeservice/api/userlogged",e="call-home-client-key-user-logged",m=function(a){this.telerikId=a.telerikId;this.uniqueId=a.uniqueId};k(document).ready(function(){g()});window.__callhome__||(window.__callhome__={});window.__callhome__.verify=
+h;window.__callhome__.init=g}})();</script><script type="text/javascript">(function(){function g(){if(window.dataLayer)for(var a=0;a<window.dataLayer.length;a++){var b=window.dataLayer[a],c;a:{c=document.cookie.split(";");for(var e="gauuid",f=0;f<c.length;f++){for(var d=c[f];" "===d.charAt(0);)d=d.substring(1,d.length);if(0===d.indexOf(e)){c=d.substring(e.length,d.length).replace("\x3d","");break a}}c=null}if(b.telerikId&&c&&h()){k.post(l,new m({telerikId:b.telerikId,uniqueId:c}));break}}}function h(){var a=new Date;if(null===localStorage.getItem(e))return localStorage.setItem(e,
+a.toISOString()),!0;var b=Date.parse(localStorage.getItem(e));if(isNaN(b))return!1;b=new Date(b);return b.setTime(b.getTime()+6048E5)<a?(localStorage.setItem(e,a.toISOString()),!0):!1}if(window.jQuery){var k=window.jQuery,l=window.location.origin+"/services/callhomeservice/api/userlogged",e="call-home-client-key-user-logged",m=function(a){this.telerikId=a.telerikId;this.uniqueId=a.uniqueId};k(document).ready(function(){g()});window.__callhome__||(window.__callhome__={});window.__callhome__.verify=
+h;window.__callhome__.init=g}})();</script><script type="text/javascript">(function(){function g(){if(window.dataLayer)for(var a=0;a<window.dataLayer.length;a++){var b=window.dataLayer[a],c;a:{c=document.cookie.split(";");for(var e="gauuid",f=0;f<c.length;f++){for(var d=c[f];" "===d.charAt(0);)d=d.substring(1,d.length);if(0===d.indexOf(e)){c=d.substring(e.length,d.length).replace("\x3d","");break a}}c=null}if(b.telerikId&&c&&h()){k.post(l,new m({telerikId:b.telerikId,uniqueId:c}));break}}}function h(){var a=new Date;if(null===localStorage.getItem(e))return localStorage.setItem(e,
+a.toISOString()),!0;var b=Date.parse(localStorage.getItem(e));if(isNaN(b))return!1;b=new Date(b);return b.setTime(b.getTime()+6048E5)<a?(localStorage.setItem(e,a.toISOString()),!0):!1}if(window.jQuery){var k=window.jQuery,l=window.location.origin+"/services/callhomeservice/api/userlogged",e="call-home-client-key-user-logged",m=function(a){this.telerikId=a.telerikId;this.uniqueId=a.uniqueId};k(document).ready(function(){g()});window.__callhome__||(window.__callhome__={});window.__callhome__.verify=
+h;window.__callhome__.init=g}})();</script><script type="text/javascript">(function(){function g(){if(window.dataLayer)for(var a=0;a<window.dataLayer.length;a++){var b=window.dataLayer[a],c;a:{c=document.cookie.split(";");for(var e="gauuid",f=0;f<c.length;f++){for(var d=c[f];" "===d.charAt(0);)d=d.substring(1,d.length);if(0===d.indexOf(e)){c=d.substring(e.length,d.length).replace("\x3d","");break a}}c=null}if(b.telerikId&&c&&h()){k.post(l,new m({telerikId:b.telerikId,uniqueId:c}));break}}}function h(){var a=new Date;if(null===localStorage.getItem(e))return localStorage.setItem(e,
+a.toISOString()),!0;var b=Date.parse(localStorage.getItem(e));if(isNaN(b))return!1;b=new Date(b);return b.setTime(b.getTime()+6048E5)<a?(localStorage.setItem(e,a.toISOString()),!0):!1}if(window.jQuery){var k=window.jQuery,l=window.location.origin+"/services/callhomeservice/api/userlogged",e="call-home-client-key-user-logged",m=function(a){this.telerikId=a.telerikId;this.uniqueId=a.uniqueId};k(document).ready(function(){g()});window.__callhome__||(window.__callhome__={});window.__callhome__.verify=
+h;window.__callhome__.init=g}})();</script><script type="text/javascript">(function(){function g(){if(window.dataLayer)for(var a=0;a<window.dataLayer.length;a++){var b=window.dataLayer[a],c;a:{c=document.cookie.split(";");for(var e="gauuid",f=0;f<c.length;f++){for(var d=c[f];" "===d.charAt(0);)d=d.substring(1,d.length);if(0===d.indexOf(e)){c=d.substring(e.length,d.length).replace("\x3d","");break a}}c=null}if(b.telerikId&&c&&h()){k.post(l,new m({telerikId:b.telerikId,uniqueId:c}));break}}}function h(){var a=new Date;if(null===localStorage.getItem(e))return localStorage.setItem(e,
+a.toISOString()),!0;var b=Date.parse(localStorage.getItem(e));if(isNaN(b))return!1;b=new Date(b);return b.setTime(b.getTime()+6048E5)<a?(localStorage.setItem(e,a.toISOString()),!0):!1}if(window.jQuery){var k=window.jQuery,l=window.location.origin+"/services/callhomeservice/api/userlogged",e="call-home-client-key-user-logged",m=function(a){this.telerikId=a.telerikId;this.uniqueId=a.uniqueId};k(document).ready(function(){g()});window.__callhome__||(window.__callhome__={});window.__callhome__.verify=
+h;window.__callhome__.init=g}})();</script><script type="text/javascript">(function(){function g(){if(window.dataLayer)for(var a=0;a<window.dataLayer.length;a++){var b=window.dataLayer[a],c;a:{c=document.cookie.split(";");for(var e="gauuid",f=0;f<c.length;f++){for(var d=c[f];" "===d.charAt(0);)d=d.substring(1,d.length);if(0===d.indexOf(e)){c=d.substring(e.length,d.length).replace("\x3d","");break a}}c=null}if(b.telerikId&&c&&h()){k.post(l,new m({telerikId:b.telerikId,uniqueId:c}));break}}}function h(){var a=new Date;if(null===localStorage.getItem(e))return localStorage.setItem(e,
+a.toISOString()),!0;var b=Date.parse(localStorage.getItem(e));if(isNaN(b))return!1;b=new Date(b);return b.setTime(b.getTime()+6048E5)<a?(localStorage.setItem(e,a.toISOString()),!0):!1}if(window.jQuery){var k=window.jQuery,l=window.location.origin+"/services/callhomeservice/api/userlogged",e="call-home-client-key-user-logged",m=function(a){this.telerikId=a.telerikId;this.uniqueId=a.uniqueId};k(document).ready(function(){g()});window.__callhome__||(window.__callhome__={});window.__callhome__.verify=
+h;window.__callhome__.init=g}})();</script><script>
+    function initScheduler() {
+        $("#scheduler").kendoScheduler({
+            date: new Date("2013/6/26"),
+            startTime: new Date("2013/6/26 07:00 AM"),
+            height: 'auto',
+            views: [
+                { type: "day", selected: true },
+                { type: "week", selectedDateFormat: "{0:ddd,MMM dd,yyyy} - {1:ddd,MMM dd,yyyy}" },
+                "month",
+                { type: "agenda", selectedDateFormat: "{0:ddd, M/dd/yyyy} - {1:ddd, M/dd/yyyy}" },
+                "timeline"
+            ],
+            mobile: "phone",
+            timezone: "Etc/UTC",
+            dataSource: {
+                batch: true,
+                transport: {
+                    read: {
+                        url: "//demos.telerik.com/kendo-ui/service/meetings",
+                        dataType: "jsonp"
+                    },
+                    update: {
+                        url: "//demos.telerik.com/kendo-ui/service/meetings/update",
+                        dataType: "jsonp"
+                    },
+                    create: {
+                        url: "//demos.telerik.com/kendo-ui/service/meetings/create",
+                        dataType: "jsonp"
+                    },
+                    destroy: {
+                        url: "//demos.telerik.com/kendo-ui/service/meetings/destroy",
+                        dataType: "jsonp"
+                    },
+                    parameterMap: function(options, operation) {
+                        if (operation !== "read" && options.models) {
+                            return {models: kendo.stringify(options.models)};
+                        }
+                    }
+                },
+                schema: {
+                    model: {
+                        id: "meetingID",
+                        fields: {
+                            meetingID: { from: "MeetingID", type: "number" },
+                            title: { from: "Title", defaultValue: "No title", validation: { required: true } },
+                            start: { type: "date", from: "Start" },
+                            end: { type: "date", from: "End" },
+                            startTimezone: { from: "StartTimezone" },
+                            endTimezone: { from: "EndTimezone" },
+                            description: { from: "Description" },
+                            recurrenceId: { from: "RecurrenceID" },
+                            recurrenceRule: { from: "RecurrenceRule" },
+                            recurrenceException: { from: "RecurrenceException" },
+                            roomId: { from: "RoomID", nullable: true },
+                            attendees: { from: "Attendees",  defaultValue: [] },
+                            isAllDay: { type: "boolean", from: "IsAllDay" }
+                        }
+                    }
+                }
+            },
+            resources: [
+            {
+                field: "roomId",
+                dataSource: [
+                    { text: "Meeting Room 101", value: 1, color: "#6eb3fa" },
+                    { text: "Meeting Room 201", value: 2, color: "#f58a8a" }
+                ],
+                title: "Room"
+            },
+            {
+                field: "attendees",
+                dataSource: [
+                    { text: "Alex", value: 1, color: "#f8a398" },
+                    { text: "Bob", value: 2, color: "#51a0ed" },
+                    { text: "Charlie", value: 3, color: "#56ca85" }
+                ],
+                multiple: true,
+                title: "Attendees"
+            }
+            ]
+        });
+    }
+</script><script type="text/javascript">(function(){function g(){if(window.dataLayer)for(var a=0;a<window.dataLayer.length;a++){var b=window.dataLayer[a],c;a:{c=document.cookie.split(";");for(var e="gauuid",f=0;f<c.length;f++){for(var d=c[f];" "===d.charAt(0);)d=d.substring(1,d.length);if(0===d.indexOf(e)){c=d.substring(e.length,d.length).replace("\x3d","");break a}}c=null}if(b.telerikId&&c&&h()){k.post(l,new m({telerikId:b.telerikId,uniqueId:c}));break}}}function h(){var a=new Date;if(null===localStorage.getItem(e))return localStorage.setItem(e,
+a.toISOString()),!0;var b=Date.parse(localStorage.getItem(e));if(isNaN(b))return!1;b=new Date(b);return b.setTime(b.getTime()+6048E5)<a?(localStorage.setItem(e,a.toISOString()),!0):!1}if(window.jQuery){var k=window.jQuery,l=window.location.origin+"/services/callhomeservice/api/userlogged",e="call-home-client-key-user-logged",m=function(a){this.telerikId=a.telerikId;this.uniqueId=a.uniqueId};k(document).ready(function(){g()});window.__callhome__||(window.__callhome__={});window.__callhome__.verify=
+h;window.__callhome__.init=g}})();</script><script type="text/javascript">(function(){function g(){if(window.dataLayer)for(var a=0;a<window.dataLayer.length;a++){var b=window.dataLayer[a],c;a:{c=document.cookie.split(";");for(var e="gauuid",f=0;f<c.length;f++){for(var d=c[f];" "===d.charAt(0);)d=d.substring(1,d.length);if(0===d.indexOf(e)){c=d.substring(e.length,d.length).replace("\x3d","");break a}}c=null}if(b.telerikId&&c&&h()){k.post(l,new m({telerikId:b.telerikId,uniqueId:c}));break}}}function h(){var a=new Date;if(null===localStorage.getItem(e))return localStorage.setItem(e,
+a.toISOString()),!0;var b=Date.parse(localStorage.getItem(e));if(isNaN(b))return!1;b=new Date(b);return b.setTime(b.getTime()+6048E5)<a?(localStorage.setItem(e,a.toISOString()),!0):!1}if(window.jQuery){var k=window.jQuery,l=window.location.origin+"/services/callhomeservice/api/userlogged",e="call-home-client-key-user-logged",m=function(a){this.telerikId=a.telerikId;this.uniqueId=a.uniqueId};k(document).ready(function(){g()});window.__callhome__||(window.__callhome__={});window.__callhome__.verify=
+h;window.__callhome__.init=g}})();</script><script>
+    function initScheduler() {
+        $("#scheduler").kendoScheduler({
+            date: new Date("2013/6/26"),
+            startTime: new Date("2013/6/26 07:00 AM"),
+            height: 'auto',
+            views: [
+                { type: "day", selected: true },
+                { type: "week", selectedDateFormat: "{0:ddd,MMM dd,yyyy} - {1:ddd,MMM dd,yyyy}" },
+                "month",
+                { type: "agenda", selectedDateFormat: "{0:ddd, M/dd/yyyy} - {1:ddd, M/dd/yyyy}" },
+                "timeline"
+            ],
+            mobile: "phone",
+            timezone: "Etc/UTC",
+            dataSource: {
+                batch: true,
+                transport: {
+                    read: {
+                        url: "//demos.telerik.com/kendo-ui/service/meetings",
+                        dataType: "jsonp"
+                    },
+                    update: {
+                        url: "//demos.telerik.com/kendo-ui/service/meetings/update",
+                        dataType: "jsonp"
+                    },
+                    create: {
+                        url: "//demos.telerik.com/kendo-ui/service/meetings/create",
+                        dataType: "jsonp"
+                    },
+                    destroy: {
+                        url: "//demos.telerik.com/kendo-ui/service/meetings/destroy",
+                        dataType: "jsonp"
+                    },
+                    parameterMap: function(options, operation) {
+                        if (operation !== "read" && options.models) {
+                            return {models: kendo.stringify(options.models)};
+                        }
+                    }
+                },
+                schema: {
+                    model: {
+                        id: "meetingID",
+                        fields: {
+                            meetingID: { from: "MeetingID", type: "number" },
+                            title: { from: "Title", defaultValue: "No title", validation: { required: true } },
+                            start: { type: "date", from: "Start" },
+                            end: { type: "date", from: "End" },
+                            startTimezone: { from: "StartTimezone" },
+                            endTimezone: { from: "EndTimezone" },
+                            description: { from: "Description" },
+                            recurrenceId: { from: "RecurrenceID" },
+                            recurrenceRule: { from: "RecurrenceRule" },
+                            recurrenceException: { from: "RecurrenceException" },
+                            roomId: { from: "RoomID", nullable: true },
+                            attendees: { from: "Attendees",  defaultValue: [] },
+                            isAllDay: { type: "boolean", from: "IsAllDay" }
+                        }
+                    }
+                }
+            },
+            resources: [
+            {
+                field: "roomId",
+                dataSource: [
+                    { text: "Meeting Room 101", value: 1, color: "#6eb3fa" },
+                    { text: "Meeting Room 201", value: 2, color: "#f58a8a" }
+                ],
+                title: "Room"
+            },
+            {
+                field: "attendees",
+                dataSource: [
+                    { text: "Alex", value: 1, color: "#f8a398" },
+                    { text: "Bob", value: 2, color: "#51a0ed" },
+                    { text: "Charlie", value: 3, color: "#56ca85" }
+                ],
+                multiple: true,
+                title: "Attendees"
+            }
+            ]
+        });
+    }
+</script><div class="km-widget km-view" style="transform-origin: left top 0px;" data-role="view" data-init="initScheduler" data-title="Scheduler" data-stretch="true" data-url="scheduler/adaptive"><header class="km-header" data-role="header">
+            <div class="km-accent km-widget km-navbar" data-role="navbar"><div class="km-rightitem"><a title="Show this demo source code" class="km-widget km-button" id="source-code-button" style="touch-action: pan-y;" data-role="button" data-click="goToSourceCode" data-icon="source-code" data-align="right"><span class="km-icon km-source-code"></span><span class="km-text">Source Code</span></a></div><div class="km-leftitem"><a class="km-widget km-button km-back" style="touch-action: pan-y;" href="#/" data-role="backbutton" data-icon="arrow-w" data-align="left" data-transition="slide reverse"><span class="km-icon km-arrow-w km-notext"></span></a></div><div class="km-view-title">
+                
+                <span data-role="view-title">Scheduler</span>
+                
+            </div></div>
+        </header><div class="km-content km-stretched-view" data-role="content">
+    <div class="km-pane-wrapper" style="height: auto;"><div class="km-widget km-pane" style="touch-action: pan-y;" data-role="pane"><div class="km-widget km-view" id="34978f36-440e-4457-81ea-060e21a99a71" data-role="view" data-stretch="true"><div class="km-content km-stretched-view" data-role="content"><div class="k-widget k-scheduler k-floatwrap k-scheduler-mobile k-scheduler-phone" id="scheduler" role="grid" aria-multiselectable="true" style="height: auto; touch-action: pan-y;" data-role="scheduler"><div class="k-floatwrap k-header k-scheduler-toolbar"><ul class="k-reset k-header k-scheduler-navigation"><li class="k-state-default k-nav-today"><a class="k-link" role="button" href="#">Today</a></li></ul><ul class="k-reset k-header k-scheduler-views"><li class="k-current-view" data-name="day"><a class="k-link" role="button" href="#">Day</a></li><li class="k-state-default k-view-day k-state-selected" data-name="day"><a class="k-link" role="button" href="#">Day</a></li><li class="k-state-default k-view-week" data-name="week"><a class="k-link" role="button" href="#">Week</a></li><li class="k-state-default k-view-month" data-name="month"><a class="k-link" role="button" href="#">Month</a></li><li class="k-state-default k-view-agenda" data-name="agenda"><a class="k-link" role="button" href="#">Agenda</a></li><li class="k-state-default k-view-timeline" data-name="timeline"><a class="k-link" role="button" href="#">Timeline</a></li></ul></div><div class="k-floatwrap k-header k-scheduler-toolbar"><ul class="k-reset k-header k-scheduler-navigation"><li class="k-state-default k-nav-prev"><a class="k-link" role="button" href="#"><span class="k-icon k-i-arrow-w"></span></a></li><li class="k-state-default k-nav-current"><span class="k-sm-date-format" data-bind="text: formattedShortDate">6/26/2013</span><span class="k-lg-date-format" data-bind="text: formattedDate">Wednesday, June 26, 2013</span></li><li class="k-state-default k-nav-next"><a class="k-link" role="button" href="#"><span class="k-icon k-i-arrow-e"></span></a></li></ul></div><table class="k-scheduler-layout k-scheduler-dayview k-scrollbar-v"><tbody><tr><td><div class="k-scheduler-times"><table class="k-scheduler-table"><tbody><tr style="height: 35px;"><th>&nbsp;</th></tr><tr style="height: 34px;"><th class="k-scheduler-times-all-day">all day</th></tr></tbody></table></div></td><td><div class="k-scheduler-header k-state-default" style="padding-right: 11px;"><div class="k-scheduler-header-wrap"><table class="k-scheduler-table"><tbody><tr><th colspan="1"><span class="k-link k-nav-day">Wed 6/26</span></th></tr></tbody></table><div style="position:relative"><table class="k-scheduler-table k-scheduler-header-all-day"><tbody><tr role="row" style="height: 34px;"><td role="gridcell" aria-selected="false">&nbsp;</tr></tbody></table></div></div></div></td></tr><tr><td><div class="k-scheduler-times" style="height: 66px;"><table class="k-scheduler-table" style="height: 1185px;"><tbody><tr><th rowspan="1">7:00 AM</th></tr><tr><th class="k-slot-cell" rowspan="1">&nbsp;</th></tr><tr><th rowspan="1">8:00 AM</th></tr><tr><th class="k-slot-cell" rowspan="1">&nbsp;</th></tr><tr><th rowspan="1">9:00 AM</th></tr><tr><th class="k-slot-cell" rowspan="1">&nbsp;</th></tr><tr><th rowspan="1">10:00 AM</th></tr><tr><th class="k-slot-cell" rowspan="1">&nbsp;</th></tr><tr><th rowspan="1">11:00 AM</th></tr><tr><th class="k-slot-cell" rowspan="1">&nbsp;</th></tr><tr><th rowspan="1">12:00 PM</th></tr><tr><th class="k-slot-cell" rowspan="1">&nbsp;</th></tr><tr><th rowspan="1">1:00 PM</th></tr><tr><th class="k-slot-cell" rowspan="1">&nbsp;</th></tr><tr><th rowspan="1">2:00 PM</th></tr><tr><th class="k-slot-cell" rowspan="1">&nbsp;</th></tr><tr><th rowspan="1">3:00 PM</th></tr><tr><th class="k-slot-cell" rowspan="1">&nbsp;</th></tr><tr><th rowspan="1">4:00 PM</th></tr><tr><th class="k-slot-cell" rowspan="1">&nbsp;</th></tr><tr><th rowspan="1">5:00 PM</th></tr><tr><th class="k-slot-cell" rowspan="1">&nbsp;</th></tr><tr><th rowspan="1">6:00 PM</th></tr><tr><th class="k-slot-cell" rowspan="1">&nbsp;</th></tr><tr><th rowspan="1">7:00 PM</th></tr><tr><th class="k-slot-cell" rowspan="1">&nbsp;</th></tr><tr><th rowspan="1">8:00 PM</th></tr><tr><th class="k-slot-cell" rowspan="1">&nbsp;</th></tr><tr><th rowspan="1">9:00 PM</th></tr><tr><th class="k-slot-cell" rowspan="1">&nbsp;</th></tr><tr><th rowspan="1">10:00 PM</th></tr><tr><th class="k-slot-cell" rowspan="1">&nbsp;</th></tr><tr><th rowspan="1">11:00 PM</th></tr><tr><th class="k-slot-cell" rowspan="1">&nbsp;</th></tr></tbody></table></div></td><td><div class="k-scheduler-content" style="height: 66px;"><table class="k-scheduler-table"><tbody><tr class="k-middle-row" role="row"><td class=" k-nonwork-hour" role="gridcell" aria-selected="false">&nbsp;</td></tr><tr role="row"><td class=" k-nonwork-hour" role="gridcell" aria-selected="false">&nbsp;</td></tr><tr class="k-middle-row" role="row"><td role="gridcell" aria-selected="false">&nbsp;</td></tr><tr role="row"><td role="gridcell" aria-selected="false">&nbsp;</td></tr><tr class="k-middle-row" role="row"><td role="gridcell" aria-selected="false">&nbsp;</td></tr><tr role="row"><td role="gridcell" aria-selected="false">&nbsp;</td></tr><tr class="k-middle-row" role="row"><td role="gridcell" aria-selected="false">&nbsp;</td></tr><tr role="row"><td role="gridcell" aria-selected="false">&nbsp;</td></tr><tr class="k-middle-row" role="row"><td role="gridcell" aria-selected="false">&nbsp;</td></tr><tr role="row"><td role="gridcell" aria-selected="false">&nbsp;</td></tr><tr class="k-middle-row" role="row"><td role="gridcell" aria-selected="false">&nbsp;</td></tr><tr role="row"><td role="gridcell" aria-selected="false">&nbsp;</td></tr><tr class="k-middle-row" role="row"><td role="gridcell" aria-selected="false">&nbsp;</td></tr><tr role="row"><td role="gridcell" aria-selected="false">&nbsp;</td></tr><tr class="k-middle-row" role="row"><td role="gridcell" aria-selected="false">&nbsp;</td></tr><tr role="row"><td role="gridcell" aria-selected="false">&nbsp;</td></tr><tr class="k-middle-row" role="row"><td role="gridcell" aria-selected="false">&nbsp;</td></tr><tr role="row"><td role="gridcell" aria-selected="false">&nbsp;</td></tr><tr class="k-middle-row" role="row"><td role="gridcell" aria-selected="false">&nbsp;</td></tr><tr role="row"><td role="gridcell" aria-selected="false">&nbsp;</td></tr><tr class="k-middle-row" role="row"><td class=" k-nonwork-hour" role="gridcell" aria-selected="false">&nbsp;</td></tr><tr role="row"><td class=" k-nonwork-hour" role="gridcell" aria-selected="false">&nbsp;</td></tr><tr class="k-middle-row" role="row"><td class=" k-nonwork-hour" role="gridcell" aria-selected="false">&nbsp;</td></tr><tr role="row"><td class=" k-nonwork-hour" role="gridcell" aria-selected="false">&nbsp;</td></tr><tr class="k-middle-row" role="row"><td class=" k-nonwork-hour" role="gridcell" aria-selected="false">&nbsp;</td></tr><tr role="row"><td class=" k-nonwork-hour" role="gridcell" aria-selected="false">&nbsp;</td></tr><tr class="k-middle-row" role="row"><td class=" k-nonwork-hour" role="gridcell" aria-selected="false">&nbsp;</td></tr><tr role="row"><td class=" k-nonwork-hour" role="gridcell" aria-selected="false">&nbsp;</td></tr><tr class="k-middle-row" role="row"><td class=" k-nonwork-hour" role="gridcell" aria-selected="false">&nbsp;</td></tr><tr role="row"><td class=" k-nonwork-hour" role="gridcell" aria-selected="false">&nbsp;</td></tr><tr class="k-middle-row" role="row"><td class=" k-nonwork-hour" role="gridcell" aria-selected="false">&nbsp;</td></tr><tr role="row"><td class=" k-nonwork-hour" role="gridcell" aria-selected="false">&nbsp;</td></tr><tr class="k-middle-row" role="row"><td class=" k-nonwork-hour" role="gridcell" aria-selected="false">&nbsp;</td></tr><tr role="row"><td class=" k-nonwork-hour" role="gridcell" aria-selected="false">&nbsp;</td></tr></tbody></table><div class="k-event k-event-inverse" role="gridcell" aria-selected="false" style="border-color: rgb(110, 179, 250); left: 2px; top: 174px; width: 1189.4px; height: 67px; background-color: rgb(110, 179, 250);" data-uid="dad28af9-5db2-4802-9b76-4d5049fd4ce6"><span class="k-event-actions"></span><div title="(9:30 AM - 10:30 AM): Phone Sync with NY Office"><div class="k-event-template k-event-time">9:30 AM - 10:30 AM</div><div class="k-event-template">Phone Sync with NY Office</div></div><span class="k-event-actions"></span><span class="k-event-top-actions"></span><span class="k-event-bottom-actions"></span><span class="k-resize-handle k-resize-n"></span><span class="k-resize-handle k-resize-s"></span></div><div class="k-event k-event-inverse" role="gridcell" aria-selected="false" style="border-color: rgb(245, 138, 138); left: 2px; top: 418px; width: 1189.4px; height: 32px; background-color: rgb(245, 138, 138);" data-uid="5bc3dd16-ec0f-492b-862f-4c28bd475f17"><span class="k-event-actions"></span><div title="(1:00 PM - 1:30 PM): Short HR Presentation"><div class="k-event-template k-event-time">1:00 PM - 1:30 PM</div><div class="k-event-template">Short HR Presentation</div></div><span class="k-event-actions"></span><span class="k-event-top-actions"></span><span class="k-event-bottom-actions"></span><span class="k-resize-handle k-resize-n"></span><span class="k-resize-handle k-resize-s"></span></div><div class="k-event k-event-inverse" role="gridcell" aria-selected="false" style="border-color: rgb(110, 179, 250); left: 2px; top: 523px; width: 592.7px; height: 67px; background-color: rgb(110, 179, 250);" data-uid="82c5a474-7299-4c9f-9697-1bb0865d15b2"><span class="k-event-actions"></span><div title="(2:30 PM - 3:30 PM): Phone Sync with Boston Office"><div class="k-event-template k-event-time">2:30 PM - 3:30 PM</div><div class="k-event-template">Phone Sync with Boston Office</div></div><span class="k-event-actions"></span><span class="k-event-top-actions"></span><span class="k-event-bottom-actions"></span><span class="k-resize-handle k-resize-n"></span><span class="k-resize-handle k-resize-s"></span></div><div class="k-event k-event-inverse" role="gridcell" aria-selected="false" style="border-color: rgb(245, 138, 138); left: 598.7px; top: 558px; width: 592.7px; height: 101px; background-color: rgb(245, 138, 138);" data-uid="45401c02-7c79-4ff4-b31d-91bc5fb90a47"><span class="k-event-actions"></span><div title="(3:00 PM - 4:30 PM):  Job Interview - Bernard Atkins"><div class="k-event-template k-event-time">3:00 PM - 4:30 PM</div><div class="k-event-template"> Job Interview - Bernard Atkins</div></div><span class="k-event-actions"></span><span class="k-event-top-actions"></span><span class="k-event-bottom-actions"></span><span class="k-resize-handle k-resize-n"></span><span class="k-resize-handle k-resize-s"></span></div></div></td></tr></tbody></table><div class="k-header k-scheduler-footer"><ul class="k-reset k-header"><li class="k-state-default k-scheduler-fullday"><a class="k-link" href="#"><span class="k-icon k-i-clock"></span>Show business hours</a></li></ul></div></div></div><div style="height: 100%; width: 100%; position: absolute; top: 0; left: 0; z-index: 20000; display: none"></div></div><div class="km-loader km-widget" style="display: none;" data-role="loader"><span class="km-loading km-spin"></span><span class="km-loading-left"></span><span class="km-loading-right"></span><h1>Loading...</h1></div></div></div>
+</div><div style="height: 100%; width: 100%; position: absolute; top: 0; left: 0; z-index: 20000; display: none"></div></div></body></html>

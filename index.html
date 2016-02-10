@@ -1,0 +1,548 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Mirrored from www.acdemo1.com/Project-P/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 18 Mar 2015 14:40:26 GMT -->
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<title>Project-P</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/menu_sideslide.css" />
+<link href="css/owl.carousel.css" rel="stylesheet" />
+<link href="css/font-awesome.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="css/jquery-ui.css" media="all">
+<link href="css/jquery.fancybox.css" rel="stylesheet" />
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/nprogress.js"></script>
+<script type="text/javascript">
+function toggle_visibility(id) {
+       var e = document.getElementById(id);
+	   var strClass = jQuery(e).hasClass('open');
+       if(strClass == true)
+          jQuery(e).removeClass('open');
+       else
+          jQuery(e).addClass('open');
+}
+$(document).ready(function() {
+	NProgress.start();
+	NProgress.done();
+});	
+</script>
+</head>
+		
+<body>
+<!-- Modal -->
+<div class="container">
+    <!-- Trigger the modal with a button -->
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#login">Modal Test Buttton</button>
+
+    <!-- Modal Login -->
+    <div class="modal fade" id="login" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Postr Login</h4>
+                </div>
+                <div class="modal-body">
+
+                    <form class="login" action="submit">
+                        <h5>Login Using Facebook.</h5>
+                        <button class="" id="facebook"><i class="fa fa-facebook"></i><span class="verticalLine"></span>Log in with Facebook</button>
+                        <hr/>
+                        <input class="" type="text" placeholder="Username or Email"/>
+                        <input class="" type="password" placeholder="Password"/>
+                        <button class="" type="submit">Login</button>
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-sign-up" data-toggle="modal" data-target="#sign-up" data-dismiss="modal">Sign Up!</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Modal Sign Up 1 -->
+    <div class="modal fade" id="sign-up" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Postr Sign Up</h4>
+                </div>
+                <div class="modal-body">
+
+                    <form class="login" action="submit">
+                        <h5>Sign Up Using Facebook.</h5>
+                        <button class="" id="facebook"><i class="fa fa-facebook"></i><span class="verticalLine"></span>Sign Up with Facebook</button>
+                        <hr/>
+                        <input class="" type="text" placeholder="First Name"/>
+                        <input class="" type="text" placeholder="Last Name"/>
+                        <input class="" type="email" placeholder="Email"/>
+                        <input class="" type="password" placeholder="Password"/>
+                        <button class="" type="submit">Sign Up</button>
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-sign-up" data-toggle="modal" data-target="#login" data-dismiss="modal">Login</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<header class="header" id="header">
+    <div class="header-top">
+        <div class="container">
+            <button class="menu-button" id="open-button"><i class="fa fa-navicon"></i></button>
+            <div class="signup"><a href="#" class="btn" style="padding: 3px 8px;">Sign Up</a></div>
+            <!--<div class="logo"><a href="index-2.html"><img src="images/plogo.png" /></a></div>-->
+
+            <button class="filter-button" id="open-button1"><i class="fa fa-filter"></i></button>
+            <div class="top-login"><!--<a href="#"><span class="p-img">&lt;!&ndash;<img src="images/prfl-img.png" />&ndash;&gt;</span><span class="login-dt">Friday Dec 18, 2014</span></a>--><a href="#" class="btn">Logout</a>
+                <div class="top-search-main">
+                    <a class="search_icon" href="#" onclick="toggle_visibility('search_box');">&nbsp;</a>
+                    <div class="top-search" id="search_box">
+                        <form>
+                            <input type="text" placeholder="Search" />
+                            <div class="submit-btn"><span class="glyphicon glyphicon-search"><input type="submit" /></span></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="top-nav">
+        <div class="container">
+            <ul id="menu" class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Services</a>
+                    <ul>
+                        <li><a href="#">Submenu1</a></li>
+                        <li><a href="#">Submenu2</a></li>
+                        <li><a href="#">Submenu3</a></li>
+                        <li><a href="#">Submenu4</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+            <script type="text/javascript">
+                var menu=new menu.dd("menu");
+                menu.init("menu","menuhover");
+            </script>
+        </div>
+    </div>
+</header>
+<div class="container-fluid no-padd" ng-app="LoadingBarExample" ng-controller="ExampleCtrl">
+	<div class="side-menu">	
+        <div class="menu-wrap">
+            <nav class="menu">
+            	<div class="menu-box">
+                    <h2>Boards</h2>
+                    <ul>
+                    	<li><a href="#"><i class="fa fa-heart"></i>Favourite</a>
+                            <ul>
+                                <li><a href="#">Kids Activities</a></li>
+                                <li><a href="#">Bills, Insurance, Bank, Credit Cards</a></li>
+                                <li><a href="#">Side Jobs</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="fa fa-star"></i>High Priority</a></li>
+                        <li><a href="#"><i class="fa fa-star-half-full"></i>Priority</a></li>
+                        <li><a href="#"><i class="fa fa-star-o"></i>Low Priority</a></li>
+                    </ul>
+                </div>
+                <div class="menu-box">
+                    <h2>Tools</h2>
+                    <ul>
+                    	<li><a href="#"><i class="fa fa-search"></i>Explorers</a>
+                            <ul>
+                                <li><a href="#"><i class="fa fa-book"></i>Notebook</a></li>
+                                <li><a href="#"><i class="fa fa-photo"></i>Gallery</a></li>
+                                <li><a href="#"><i class="fa fa-file-text-o"></i>Documents</a></li>
+                                <li><a href="#"><i class="fa fa-globe"></i>Atlas</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="fa fa-wrench"></i>Productivity</a>
+                        	<ul>
+                                <li><a href="#"><i class="fa fa-calendar"></i>Calendar</a></li>
+                                <li><a href="#"><i class="fa fa-user"></i>Contacts</a></li>
+                                <li><a href="#"><i class="fa fa-at"></i>Email</a></li>
+                                <li><a href="#"><i class="fa fa-location-arrow"></i>Navigation</a></li>
+                                <li><a href="#"><i class="fa fa-key"></i>Passwords</a></li>
+                                <li><a href="#"><i class="fa fa-tags"></i>Tags</a></li>
+                                <li><a href="#"><i class="fa fa-th-list"></i>To Do</a></li>
+                                <li><a href="#"><i class="fa fa-bell"></i>Reminders</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu-box">
+                    <h2>Administration</h2>
+                    <ul>
+                    	<li><a href="#"><i class="fa fa-tasks"></i>Board Manager</a></li>
+                        <li><a href="#"><i class="fa fa-file-zip-o"></i>Tile Manager</a></li>
+                        <li><a href="#"><i class="fa fa-shopping-cart"></i>On Board</a></li>
+                        <li><a href="#"><i class="fa fa-cog"></i>Settings</a></li>
+                        <li><a href="#"><i class="fa fa-lock"></i>Security</a></li>
+                        <li><a href="#"><i class="fa fa-cloud"></i>Storage</a></li>
+                        <li><a href="#"><i class="fa fa-user"></i>Profile</a></li>
+                        <li><a href="#"><i class="fa fa-sign-out"></i>Logout</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <button class="close-button" id="close-button">Close Menu</button>
+        </div>        
+    </div>
+    <div class="side-menu">	
+        <div class="menu-wrap1">
+            <nav class="menu">
+            	<div class="menu-box filter-box">
+                	<form>
+                    	<div class="filter-search">
+                        	<input type="text" placeholder="Search" />
+                            <div class="fa fa-search"><input type="submit" value="" /></div>
+                            <button type="reset" class="fr-reset"><i class="fa fa-close"></i></button>
+                  		</div>
+                        <div class="brd-btns">
+                        	<button type="button" class="btn">Current Boards</button>
+                            <button type="button" class="btn">All Boards</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="menu-box filter-box">
+                    <h2>Tools</h2>
+                    <ul>
+                    	<li><a href="index-2.html"><i class="fa fa-check-square-o"></i>All</a></li>
+                        <li><a href="photo.html"><i class="fa fa-square-o"></i>Deselect</a></li>
+                        <li><a href="email.html"><i class="fa fa-at"></i>Email</a></li>
+                        <li><a href="calendar.html"><i class="fa fa-book"></i>Notes</a></li>
+                        <li><a href="gallery.html"><i class="fa fa-photo"></i>Gallery</a></li>
+                        <li><a href="newsfeed.html"><i class="fa fa-th-list"></i>To do</a></li>
+                        <li><a href="watchlist.html"><i class="fa fa-globe"></i>Atlas</a></li>
+                        <li><a href="notes.html"><i class="fa fa-bell"></i>Alerts</a></li>
+                        <li><a href="tasklist.html"><i class="fa fa-th-large"></i>Tiles</a></li>
+                        <li><a href="boards.html"><i class="fa fa-warning"></i>Warnings</a></li>                      
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+                <div class="menu-box filter-box">
+                    <h2>Activity</h2>
+                    <ul>
+                    	<li><a href="#"><i class="fa fa-star"></i>High Priority</a></li>
+                        <li><a href="#"><i class="fa fa-star-half-full"></i>Priority</a></li>
+                        <li><a href="#"><i class="fa fa-star-o"></i>Low Priority</a></li>
+                        <li><a href="#"><i class="fa fa-heart"></i>Favourite</a></li>
+                        <li><a href="#"><i class="fa fa-photo"></i>Photo</a></li>                   
+                    </ul>
+                    <div class="clear"></div>
+                </div>                
+            </nav>
+        </div>        
+    </div>
+
+    <div class="main-wrap">
+
+        <div class="content-wrap">
+        	<div class="col-xs-12 col-sm-12 col-md-12 no-padd">
+
+           		<section class="acc-links">
+                	<div class="container">
+                    	<div class="links-top">
+                            <div><div class="list-item basic"><div class="border"><a href="#"><span class="linkicn link-icon1"></span><span>12<br />Warning</span></a></div></div></div>
+                            <div><div class="list-item basic"><a href="#"><span class="linkicn link-icon2"></span><span>15<br />Inbox</span></a></div></div>
+                            <div><div class="list-item basic"><a href="#"><span class="linkicn link-icon3"></span><span>23<br />Today</span></a></div></div>
+                            <div><div class="list-item basic"><a href="#"><span class="linkicn link-icon4"></span><span>75&deg;F<br /> Sunny</span></a></div></div>
+                            <div><div class="list-item basic"><a href="#"><span class="linkicn link-icon5"></span><span><br />Password</span></a></div></div>
+                            <div><div class="list-item basic"><a href="#"><span class="linkicn link-icon6"></span><span><br />Contact</span></a></div></div>
+                            <div><div class="list-item basic"><a href="#"><span class="linkicn link-icon3"></span><span>My Precinct</span></a></div></div>
+                            <div><div class="list-item basic"><a href="#"><span class="linkicn link-icon4"></span><span>My Precinct</span></a></div></div>
+                        </div>
+                    </div>					
+                </section>
+                <section class="content">
+                    <div class="container">
+                        <div class="col-xs-12 col-sm-7 col-md-7 no-padd section-caldr">
+                            <div id="datepicker"></div>
+                        </div>
+                        <div class="col-xs-12 col-sm-5 col-md-5 no-padd cal-sidebar">
+                            <div class="item-post">
+                                <div class="post-title">
+                                    <span class="title-icon"><img src="images/icon-play.png" /></span>
+                                    <div class="tit-time">
+                                        11 Dec '14
+                                        <a href="#inline1" class="add-link popup-link">+</a>
+                                        <div id="inline1" class="popup-box">
+                                            <div class="popup-cont">
+                                                <h2>11 Dec 2014</h2>
+                                                <ul class="evnt-task">
+                                                    <li><span class="tim">01:00 PM</span><div class="inptxt"><input type="text" /><button type="submit" class="add-task"><i>+</i> Add</button></div></li>
+                                                    <li><span class="tim">02:00 PM</span><div class="inptxt"><input type="text" /><button type="submit" class="add-task"><i>+</i> Add</button></div></li>
+                                                    <li><span class="tim">03:00 PM</span><div class="inptxt"><input type="text" /><button type="submit" class="add-task"><i>+</i> Add</button></div></li>
+                                                    <li><span class="tim">04:00 PM</span><div class="inptxt"><input type="text" /><button type="submit" class="add-task"><i>+</i> Add</button></div></li>
+                                                    <li><span class="tim">05:00 PM</span><div class="inptxt"><input type="text" /><button type="submit" class="add-task"><i>+</i> Add</button></div></li>
+                                                    <li><span class="tim">06:00 PM</span><div class="inptxt"><ul class="evnt-list1">
+                                                        <li><h3><span>6:30 PM   take a passport</span></h3></li>
+                                                        <li><h3><span>6:45 PM   book a ticket</span></h3></li>
+                                                    </ul>
+                                                    </div></li>
+                                                    <li><span class="tim">07:00 PM</span><div class="inptxt"><input type="text" /><button type="submit" class="add-task"><i>+</i> Add</button></div></li>
+                                                    <li><span class="tim">08:00 PM</span><div class="inptxt"><input type="text" /><button type="submit" class="add-task"><i>+</i> Add</button></div></li>
+                                                    <li><span class="tim">09:00 PM</span><div class="inptxt"><input type="text" /><button type="submit" class="add-task"><i>+</i> Add</button></div></li>
+                                                    <li><span class="tim">10:00 PM</span><div class="inptxt"><input type="text" /><button type="submit" class="add-task"><i>+</i> Add</button></div></li>
+                                                    <li><span class="tim">11:00 PM</span><div class="inptxt"><input type="text" /><button type="submit" class="add-task"><i>+</i> Add</button></div></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post-cont evnt-task-main">
+                                    <ul class="evnt-task">
+                                        <li><span class="tim">01:00 PM</span><div class="inptxt"><input type="text" /><button type="submit" class="add-task"><i>+</i> Add</button></div></li>
+                                        <li><span class="tim">02:00 PM</span><div class="inptxt"><input type="text" /><button type="submit" class="add-task"><i>+</i> Add</button></div></li>
+                                        <li><span class="tim">03:00 PM</span><div class="inptxt"><input type="text" /><button type="submit" class="add-task"><i>+</i> Add</button></div></li>
+                                        <li><span class="tim">04:00 PM</span><div class="inptxt"><input type="text" /><button type="submit" class="add-task"><i>+</i> Add</button></div></li>
+                                    </ul>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="item-post">
+                                <div class="post-title">
+                                    <span class="title-icon"><img src="images/icon-watch.png" /></span>
+                                    <div class="tit-time">
+                                        Upcoming
+                                    </div>
+                                </div>
+                                <div class="post-cont evnt-list-main">
+                                    <ul class="evnt-list">
+                                        <li><h2><a href="#"><span class="tim">09:35a</span>Jan 15 </a></h2>Matt's basketball game at the showpdsasadaslace</li>
+                                        <li><h2><a href="#"><span class="tim">09:35a</span>Jan 15 </a></h2>Matt's basketball game at the showpdsasadaslace</li>
+                                        <li><h2><a href="#"><span class="tim">09:35a</span>Jan 15 </a></h2>Matt's basketball game at the showpdsasadaslace</li>
+                                        <li><h2><a href="#"><span class="tim">09:35a</span>Jan 15 </a></h2>Matt's basketball game at the showpdsasadaslace</li>
+                                    </ul>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="home-posts">
+                	<div class="container">
+                        <div class="post-boxes">
+                            <div class="item-post-box">
+                                <div class="item-post">
+                                    <div class="post-title">
+                                        <a href="#"><span class="title-icon"><img src="images/icon-golf.png" /></span></a>
+                                        <div class="tit-time">
+                                            <a href="#">Alpha Golf Team 2014</a>
+                                            <span class="tim">5min ago</span>
+                                        </div>
+                                    </div>
+                                    <div class="post-img">                            	
+                                        <a href="#"><img src="images/post-img.jpg" /></a>
+                                    </div>
+                                    <div class="post-btns">
+                                        <a href="#" class="btn1 btn-back"></a>
+                                        <div class="btns-two"><a href="#" class="btn1"><i class="fa fa-photo"></i>Gallery</a><a href="#" class="btn1"><i class="fa fa-share-alt"></i>Share</a></div>
+                                        <a href="#" class="btn1 btn-forward"></a>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                            <div class="item-post-box">
+                                <div class="item-post">
+                                    <div class="post-title">
+                                        <a href="#"><span class="title-icon"><img src="images/icon-dollar-house.png" /></span></a>
+                                        <div class="tit-time">
+                                            <a href="#">Chase Bank</a>
+                                        </div>
+                                    </div>
+                                    <div class="post-cont gray">                            	
+                                        <h3>Checking Balance (..4545) Low Balance in account</h3>
+                                    </div>
+                                    <div class="post-btns">
+                                        <a href="#" class="btn1 btn-back"></a>
+                                        <div class="btns-three"><a href="#" class="btn1"><i class="icn">!</i>Priority</a><a href="#" class="btn1"><i class="icn">X</i>Cancel</a><a href="#" class="btn1"><i class="fa fa-bell"></i>Alert</a></div>
+                                        <a href="#" class="btn1 btn-forward"></a>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                            <div class="item-post-box">
+                                <div class="item-post">
+                                    <div class="post-title">
+                                        <a href="#"><span class="title-icon"><img src="images/icon-swim.png" /></span></a>
+                                        <div class="tit-time">
+                                            <a href="#">Alpha Gymnastic Team 2014</a>
+                                            <span class="tim">5min ago</span>
+                                        </div>
+                                    </div>
+                                    <div class="post-cont txtcenter">                            	
+                                        <h3>Physical Exam / Birth Certificate required for Team meet Registration</h3>
+                                        <ul class="box-venue">
+                                        	<li><h3>Due:</h3>Tue Nov 18,2014@5:00pm</li>
+                                            <li><h3>Location:</h3>ABC Ground</li>
+                                            <li><h3>Alarm:</h3>1Week, 2Days, 5Hours</li>
+                                        </ul>
+                                    </div>
+                                    <div class="post-btns">
+                                        <a href="#" class="btn1 btn-back"></a>
+                                        <div class="btns-three"><a href="#" class="btn1"><i class="icn">!</i>Priority</a><a href="#" class="btn1"><i class="icn">X</i>Cancel</a><a href="#" class="btn1"><i class="fa fa-bell"></i>Alert</a></div>
+                                        <a href="#" class="btn1 btn-forward"></a>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                            <div class="item-post-box">
+                                <div class="item-post">
+                                    <div class="post-title">
+                                        <a href="#"><span class="title-icon"><img src="images/icon-baseball.png" /></span></a>
+                                        <div class="tit-time">
+                                            <a href="#">Alpha Baseball Team 2014</a>
+                                            <span class="tim">5min ago</span>
+                                        </div>
+                                    </div>
+                                    <div class="post-img">                            	
+                                        <a href="#"><img src="images/post-img1.jpg" /></a>
+                                    </div>
+                                    <div class="post-btns">
+                                        <div class="btns-two"><a href="#" class="btn1"><i class="fa fa-photo"></i>Gallery</a><a href="#" class="btn1"><i class="fa fa-share-alt"></i>Share</a></div>
+                                        <a href="#" class="btn1 btn-forward"></a>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                            <div class="item-post-box">
+                                <div class="item-post">
+                                    <div class="post-title">
+                                        <a href="#"><span class="title-icon"><img src="images/icon-football.png" /></span></a>
+                                        <div class="tit-time">
+                                            <a href="#">Office Football League</a>
+                                        </div>
+                                    </div>
+                                    <div class="post-cont txtcenter">                            	
+                                        <h3>Physical Exam / Birth Certificate required for Team meet Registration</h3>
+                                        <ul class="box-venue">
+                                        	<li><h3>Due:</h3>Tue Nov 18,2014@5:00pm</li>
+                                            <li><h3>Location:</h3>ABC Ground</li>
+                                            <li><h3>Alarm:</h3>1Week, 2Days, 5Hours</li>
+                                        </ul>
+                                    </div>
+                                    <div class="post-btns">
+                                        <div class="btns-three"><a href="#" class="btn1"><i class="icn">!</i>Priority</a><a href="#" class="btn1"><i class="icn">X</i>Cancel</a><a href="#" class="btn1"><i class="fa fa-bell"></i>Alert</a></div>
+                                        <a href="#" class="btn1 btn-forward"></a>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                            <div class="item-post-box">
+                                <div class="item-post">
+                                    <div class="post-title">
+                                        <a href="#"><span class="title-icon"><img src="images/icon-cam.png" /></span></a>
+                                        <div class="tit-time">
+                                            <a href="#">North Photography club</a>
+                                            <span class="tim">5min ago</span>
+                                        </div>
+                                    </div>
+                                    <div class="post-img">                            	
+                                        <a href="#"><img src="images/post-img2.jpg" /></a>
+                                    </div>
+                                    <div class="post-btns">
+                                        <div class="btns-two"><a href="#" class="btn1"><i class="fa fa-photo"></i>Gallery</a><a href="#" class="btn1"><i class="fa fa-share-alt"></i>Share</a></div>
+                                        <a href="#" class="btn1 btn-forward"></a>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                            
+                            
+                    	</div>
+                    </div>
+                </section>    
+                <footer class="footer">
+                	<div class="container">
+                    	<ul>
+                        	<li><a href="#">home</a></li>
+                            <li><a href="#">about us</a></li>
+                            <li><a href="#">service</a></li>
+                            <li><a href="#">product</a></li>
+                            <li><a href="#">blog</a></li>
+                            <li><a href="#">contact us</a></li>
+                        </ul>
+                        <div class="copyright">&copy;All Rights <a class="__cf_email__" href="http://www.acdemo1.com/cdn-cgi/l/email-protection" data-cfemail="df8dbaacbaada9babb9faff1bcb0b2">[email&#160;protected]</a><script cf-hash='f9e31' type="text/javascript">
+/* <![CDATA[ */!function(){try{var t="currentScript"in document?document.currentScript:function(){for(var t=document.getElementsByTagName("script"),e=t.length;e--;)if(t[e].getAttribute("cf-hash"))return t[e]}();if(t&&t.previousSibling){var e,r,n,i,c=t.previousSibling,a=c.getAttribute("data-cfemail");if(a){for(e="",r=parseInt(a.substr(0,2),16),n=2;a.length-n;n+=2)i=parseInt(a.substr(n,2),16)^r,e+=String.fromCharCode(i);e=document.createTextNode(e),c.parentNode.replaceChild(e,c)}}}catch(u){}}();/* ]]> */</script></div>
+                    </div>
+                </footer>
+    		</div>
+		</div>	
+	</div>
+</div>
+
+<script type="text/javascript" src="js/bootstrap.js"></script> 
+<script type="text/javascript" src="js/classie.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/jquery.sticky.js"></script>
+<script type="text/javascript" src="js/owl.carousel.js"></script>
+<script type="text/javascript" src="js/masonry.pkgd.js"></script>
+<script defer type="text/javascript" src="js/jquery.flexslider.js"></script>
+<script type="text/javascript" src="js/jquery.fancybox.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#header').sticky({topSpacing:0});
+    });
+</script>
+<script type="text/javascript">
+$(window).load(function(){
+	var container = document.querySelector('.home-posts .post-boxes');
+	var msnry = new Masonry( container, {
+	  itemSelector: '.item-post-box',
+	  gutter:0
+	});
+});	
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.popup-link').fancybox({
+            width : 650,
+            autoSize : false,
+            autoHeight : true,
+            scrolling : 'yes',
+            closeBtn : false,
+        });
+        $( "#datepicker" ).datepicker({
+            showOtherMonths: false,
+            selectOtherMonths: true,
+            prevText: 'Prev',
+            nextText: 'Next',
+            monthNames: [ "Jan'", "Feb'", "Mar'", "Apr'",
+                "May'", "Jun'", "Jul'", "Aug'", "Sep'",
+                "Oct'", "Nov'", "Dec'" ],
+            monthNamesShort: [ "Jan", "Feb", "Mar", "Apr", "Maj", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dec" ],
+            dayNamesShort: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+            dayNamesMin: ['S', 'M', 'T', 'W', 'T', 'F', 'S']
+        });
+    });
+
+</script>
+
+</body>
+
+<!-- Mirrored from www.acdemo1.com/Project-P/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 18 Mar 2015 14:40:36 GMT -->
+</html>

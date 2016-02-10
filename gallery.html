@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Mirrored from www.acdemo1.com/Project-P/gallery.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 18 Mar 2015 14:41:42 GMT -->
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<title>Project-P</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/menu_sideslide.css" />
+<link href="css/owl.carousel.css" rel="stylesheet" />
+<link href="css/font-awesome.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/nprogress.js"></script>
+<script type="text/javascript">
+function toggle_visibility(id) {
+       var e = document.getElementById(id);
+	   var strClass = jQuery(e).hasClass('open');
+       if(strClass == true)
+          jQuery(e).removeClass('open');
+       else
+          jQuery(e).addClass('open');
+}
+$(document).ready(function() {
+	NProgress.start();
+	NProgress.done();
+});	
+</script>
+</head>
+		
+<body>
+<div class="container-fluid no-padd" ng-app="LoadingBarExample" ng-controller="ExampleCtrl">
+	<div class="side-menu">	
+        <div class="menu-wrap">
+            <nav class="menu">
+            	<div class="menu-box">
+                    <h2>Boards</h2>
+                    <ul>
+                    	<li><a href="#"><i class="fa fa-heart"></i>Favourite</a>
+                            <ul>
+                                <li><a href="#">Kids Activities</a></li>
+                                <li><a href="#">Bills, Insurance, Bank, Credit Cards</a></li>
+                                <li><a href="#">Side Jobs</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="fa fa-star"></i>High Priority</a></li>
+                        <li><a href="#"><i class="fa fa-star-half-full"></i>Priority</a></li>
+                        <li><a href="#"><i class="fa fa-star-o"></i>Low Priority</a></li>
+                    </ul>
+                </div>
+                <div class="menu-box">
+                    <h2>Tools</h2>
+                    <ul>
+                    	<li><a href="#"><i class="fa fa-search"></i>Explorers</a>
+                            <ul>
+                                <li><a href="#"><i class="fa fa-book"></i>Notebook</a></li>
+                                <li><a href="#"><i class="fa fa-photo"></i>Gallery</a></li>
+                                <li><a href="#"><i class="fa fa-file-text-o"></i>Documents</a></li>
+                                <li><a href="#"><i class="fa fa-globe"></i>Atlas</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="fa fa-wrench"></i>Productivity</a>
+                        	<ul>
+                                <li><a href="#"><i class="fa fa-calendar"></i>Calendar</a></li>
+                                <li><a href="#"><i class="fa fa-user"></i>Contacts</a></li>
+                                <li><a href="#"><i class="fa fa-at"></i>Email</a></li>
+                                <li><a href="#"><i class="fa fa-location-arrow"></i>Navigation</a></li>
+                                <li><a href="#"><i class="fa fa-key"></i>Passwords</a></li>
+                                <li><a href="#"><i class="fa fa-tags"></i>Tags</a></li>
+                                <li><a href="#"><i class="fa fa-th-list"></i>To Do</a></li>
+                                <li><a href="#"><i class="fa fa-bell"></i>Reminders</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu-box">
+                    <h2>Administration</h2>
+                    <ul>
+                    	<li><a href="#"><i class="fa fa-tasks"></i>Board Manager</a></li>
+                        <li><a href="#"><i class="fa fa-file-zip-o"></i>Tile Manager</a></li>
+                        <li><a href="#"><i class="fa fa-shopping-cart"></i>On Board</a></li>
+                        <li><a href="#"><i class="fa fa-cog"></i>Settings</a></li>
+                        <li><a href="#"><i class="fa fa-lock"></i>Security</a></li>
+                        <li><a href="#"><i class="fa fa-cloud"></i>Storage</a></li>
+                        <li><a href="#"><i class="fa fa-user"></i>Profile</a></li>
+                        <li><a href="#"><i class="fa fa-sign-out"></i>Logout</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <button class="close-button" id="close-button">Close Menu</button>
+        </div>        
+    </div>
+    <div class="side-menu">	
+        <div class="menu-wrap1">
+            <nav class="menu">
+            	<div class="menu-box filter-box">
+                	<form>
+                    	<div class="filter-search">
+                        	<input type="text" placeholder="Search" />
+                            <div class="fa fa-search"><input type="submit" value="" /></div>
+                            <button type="reset" class="fr-reset"><i class="fa fa-close1"></i></button>
+                  		</div>
+                        <div class="brd-btns">
+                        	<button type="button" class="btn">Current Boards</button>
+                            <button type="button" class="btn">All Boards</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="menu-box filter-box">
+                    <h2>Tools</h2>
+                    <ul>
+                    	<li><a href="#"><i class="fa fa-check-square-o"></i>All</a></li>
+                        <li><a href="#"><i class="fa fa-square-o"></i>Deselect</a></li>
+                        <li><a href="#"><i class="fa fa-at"></i>Email</a></li>
+                        <li><a href="#"><i class="fa fa-book"></i>Notes</a></li>
+                        <li><a href="#"><i class="fa fa-photo"></i>Gallery</a></li>
+                        <li><a href="#"><i class="fa fa-th-list"></i>To do</a></li>
+                        <li><a href="#"><i class="fa fa-globe"></i>Atlas</a></li>
+                        <li><a href="#"><i class="fa fa-bell"></i>Alerts</a></li>
+                        <li><a href="#"><i class="fa fa-th-large"></i>Tiles</a></li>
+                        <li><a href="#"><i class="fa fa-warning"></i>Warnings</a></li>                      
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+                <div class="menu-box filter-box">
+                    <h2>Activity</h2>
+                    <ul>
+                    	<li><a href="#"><i class="fa fa-star"></i>High Priority</a></li>
+                        <li><a href="#"><i class="fa fa-star-half-full"></i>Priority</a></li>
+                        <li><a href="#"><i class="fa fa-star-o"></i>Low Priority</a></li>
+                        <li><a href="#"><i class="fa fa-heart"></i>Favourite</a></li>
+                        <li><a href="#"><i class="fa fa-photo"></i>Photo</a></li>                   
+                    </ul>
+                    <div class="clear"></div>
+                </div>                
+            </nav>
+        </div>        
+    </div>
+    <div class="main-wrap">
+		<div class="content-wrap">	
+        	<div class="col-xs-12 col-sm-12 col-md-12 no-padd">
+                <header class="header">
+                    <div class="header-top">
+                        <div class="container">         	
+                          	<div class="logo"><a href="index-2.html"><img src="images/logo.png" /></a></div> 
+                            <button class="menu-button" id="open-button"><i class="fa fa-navicon"></i></button> 
+                            <button class="filter-button" id="open-button1"><i class="fa fa-filter"></i></button>                     
+                            <div class="top-login"><a href="#"><span class="p-img"><img src="images/prfl-img.png" /></span><span class="login-dt">Friday Dec 18, 2014</span></a><a href="#" class="btn">Logout</a>
+                                <div class="top-search-main">
+                                    <a class="search_icon" href="#" onclick="toggle_visibility('search_box');">&nbsp;</a>
+                                    <div class="top-search" id="search_box">
+                                        <form>
+                                            <input type="text" placeholder="Search" />
+                                            <div class="submit-btn"><span class="glyphicon glyphicon-search"><input type="submit" /></span></div>
+                                        </form>
+                                    </div>
+                                </div>    
+                            </div>                                                  
+                        </div>          
+                    </div>       	
+                    <div class="top-nav">
+                        <div class="container">
+                        	<ul id="menu" class="menu">
+                            	<li><a href="#">Home</a></li>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Services</a>
+                                	<ul>
+                                        <li><a href="#">Submenu1</a></li>
+                                        <li><a href="#">Submenu2</a></li>
+                                        <li><a href="#">Submenu3</a></li>
+                                        <li><a href="#">Submenu4</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Product</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                          	</ul>
+                            <script type="text/javascript">
+							var menu=new menu.dd("menu");
+							menu.init("menu","menuhover");
+							</script>
+                        </div>
+                    </div>
+                </header>      
+           		<section class="acc-links">
+                	<div class="container">
+                    	<div class="links-top">
+                            <div><div class="list-item green bck"><a href="#"><span class="linkicn link-icon7"></span><span>Back</span></a></div>
+                            <div class="list-item yellow"><a href="#"><span class="linkicn link-icon8"></span><span>Select</span></a></div></div>
+                            <div><div class="list-item pink"><a href="#"><span class="linkicn link-icon10"></span><span>Upload</span></a></div>
+                            <div class="list-item magenta"><a href="#"><span class="linkicn link-icon11"></span><span>Galleries</span></a></div></div>                       
+                        </div>
+                    </div>					
+                </section>
+                <section class="content">
+                	<div class="container">
+                        <ul class="gal-list">
+                        	<li><div class="gal-img"><a href="#"><img src="images/gallery-img1.jpg" /></a><div class="img-overlay"><div class="img-liks"><a href="#" class="icn icn-like"></a></div></div></div></li>
+                            <li><div class="gal-img"><a href="#"><img src="images/gallery-img2.jpg" /></a><div class="img-overlay"><div class="img-liks"><a href="#" class="icn icn-like"></a></div></div></div></li>
+                            <li><div class="gal-img"><a href="#"><img src="images/gallery-img3.jpg" /></a><div class="img-overlay"><div class="img-liks"><a href="#" class="icn icn-like"></a></div></div></div></li>
+                            <li><div class="gal-img"><a href="#"><img src="images/gallery-img4.jpg" /></a><div class="img-overlay"><div class="img-liks"><a href="#" class="icn icn-like"></a></div></div></div></li>
+                            <li><div class="gal-img"><a href="#"><img src="images/gallery-img5.jpg" /></a><div class="img-overlay"><div class="img-liks"><a href="#" class="icn icn-like"></a></div></div></div></li>
+                            <li><div class="gal-img"><a href="#"><img src="images/gallery-img6.jpg" /></a><div class="img-overlay"><div class="img-liks"><a href="#" class="icn icn-like"></a></div></div></div></li>
+                        </ul>
+                        <div class="gal-btns"><button class="btn"><i class="fa fa-ban"></i>Delete</button><a class="btn" href="#"><i class="icn icn-share"></i>Share</a></div>
+                    </div>
+                </section>    
+                <footer class="footer">
+                	<div class="container">
+                    	<ul>
+                        	<li><a href="#">home</a></li>
+                            <li><a href="#">about us</a></li>
+                            <li><a href="#">service</a></li>
+                            <li><a href="#">product</a></li>
+                            <li><a href="#">blog</a></li>
+                            <li><a href="#">contact us</a></li>
+                        </ul>
+                        <div class="copyright">&copy;All Rights <a class="__cf_email__" href="http://www.acdemo1.com/cdn-cgi/l/email-protection" data-cfemail="f3a196809681859697b383dd909c9e">[email&#160;protected]</a><script cf-hash='f9e31' type="text/javascript">
+/* <![CDATA[ */!function(){try{var t="currentScript"in document?document.currentScript:function(){for(var t=document.getElementsByTagName("script"),e=t.length;e--;)if(t[e].getAttribute("cf-hash"))return t[e]}();if(t&&t.previousSibling){var e,r,n,i,c=t.previousSibling,a=c.getAttribute("data-cfemail");if(a){for(e="",r=parseInt(a.substr(0,2),16),n=2;a.length-n;n+=2)i=parseInt(a.substr(n,2),16)^r,e+=String.fromCharCode(i);e=document.createTextNode(e),c.parentNode.replaceChild(e,c)}}}catch(u){}}();/* ]]> */</script></div>
+                    </div>
+                </footer>
+    		</div>
+		</div>	
+	</div>
+</div>
+<script type="text/javascript" src="js/bootstrap.js"></script> 
+<script type="text/javascript" src="js/classie.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/owl.carousel.js"></script>
+<script type="text/javascript" src="js/masonry.pkgd.js"></script>
+</body>
+
+<!-- Mirrored from www.acdemo1.com/Project-P/gallery.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 18 Mar 2015 14:41:53 GMT -->
+</html>

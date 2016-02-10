@@ -1,0 +1,93 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Mirrored from www.acdemo1.com/Project-P/photo.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 18 Mar 2015 14:41:27 GMT -->
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<title>Project-P</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/menu_sideslide.css" />
+<link href="cssx/owl.carousel.css" rel="stylesheet" />
+<link href="css/font-awesome.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="jsx/script.js"></script>
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="jsx/nprogress.js"></script>
+
+</head>
+		
+<body>
+<div class="container-fluid no-padd" >
+	
+    <div class="main-wrap">
+		<div class="content-wrap">	
+        	<div class="col-xs-12 col-sm-12 col-md-12 no-padd">
+               
+           		
+                <section class="content">
+                	<div class="container">
+                        <div class="section-photo">
+                            <div id="pslider" class="photoslider">
+                              	<ul class="slides">
+                                  <li><img src="images/big-photo-img.jpg" /></li>
+                                  <li><img src="images/big-photo-img1.jpg" /></li>
+                                  <li><img src="images/big-photo-img2.jpg" /></li>
+                                  <li><img src="images/big-photo-img.jpg" /></li>
+                                  <li><img src="images/big-photo-img1.jpg" /></li>
+                                  <li><img src="images/big-photo-img2.jpg" /></li>
+                                  <li><img src="images/big-photo-img.jpg" /></li>
+                                  <li><img src="images/big-photo-img1.jpg" /></li>
+                                  <li><img src="images/big-photo-img2.jpg" /></li>
+                            	</ul>
+                            </div>
+                            <div id="pcarousel" class="photoslider">
+                              <ul class="slides">
+                                  <li><img src="images/thumb-photo-img.jpg" /></li>
+                                  <li><img src="images/thumb-photo-img1.jpg" /></li>
+                                  <li><img src="images/thumb-photo-img2.jpg" /></li>
+                                  <li><img src="images/thumb-photo-img.jpg" /></li>
+                                  <li><img src="images/thumb-photo-img1.jpg" /></li>
+                                  <li><img src="images/thumb-photo-img2.jpg" /></li>
+                                  <li><img src="images/thumb-photo-img.jpg" /></li>
+                                  <li><img src="images/thumb-photo-img1.jpg" /></li>
+                                  <li><img src="images/thumb-photo-img2.jpg" /></li>
+                            	</ul>
+                            </div>
+                      	</div>
+                    </div>
+                </section>    
+               
+    		</div>
+		</div>	
+	</div>
+</div>
+<script type="text/javascript" src="jsx/bootstrap.js"></script> 
+<script type="text/javascript" src="jsx/classie.js"></script>
+<script type="text/javascript" src="jsx/main.js"></script>
+<script type="text/javascript" src="js/owl.carousel.js"></script>
+<script type="text/javascript" src="jsx/masonry.pkgd.js"></script>
+<script defer type="text/javascript" src="js/jquery.flexslider.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$('#pcarousel').flexslider({
+        animation: "slide",
+		directionNav: true,
+        slideshow: false,
+        itemWidth: 124,
+        itemMargin: 5,
+        asNavFor: '#pslider'
+   	});
+    $('#pslider').flexslider({
+        animation: "slide",
+        slideshow: false,
+        sync: "#pcarousel",
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+    });	
+});	
+</script>
+</body>
+
+<!-- Mirrored from www.acdemo1.com/Project-P/photo.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 18 Mar 2015 14:41:35 GMT -->
+</html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html ng-app="app" xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+      <meta charset="utf-8">
+      <title>Priority</title>
+      <!--angular-moment.min.jsfor the calendar-->
+      <!--underscore.min.jsfor google maps-->
+      <!-- build:css styles/lib.css -->
+      <!-- bower:css -->
+      <link rel="stylesheet" href="bower_components/toastr/toastr.css" />
+      <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.min.css" />
+      <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="bower_components/ng-tags-input/ng-tags-input.min.css">
+      <link rel="stylesheet" href="bower_components/angular-bootstrap-datetimepicker/src/css/datetimepicker.css" />
+      <!-- endbower -->
+      <!-- endbuild -->
+      <!-- build:css styles/app.css-->
+      <!-- inject:css -->
+      <!--<link rel="stylesheet" href="/.tmp/bootstrap.css">
+         <link rel="stylesheet" href="/.tmp/ent-style.css">
+         <link rel="stylesheet" href="/.tmp/font-awesome.css">
+         <link rel="stylesheet" href="/.tmp/jquery-ui.css">
+         <link rel="stylesheet" href="/.tmp/jquery.datetimepicker.css">
+         <link rel="stylesheet" href="/.tmp/jquery.fancybox.css">
+         <link rel="stylesheet" href="/.tmp/menu_sideslide.css">
+         <link rel="stylesheet" href="/.tmp/owl.carousel.css">
+         <link rel="stylesheet" href="/.tmp/owl.css">-->
+      <!-- endinject -->
+      <!-- endbuild -->
+      <link rel="stylesheet" href="css/bootstrap.css">
+      <link rel="stylesheet" href="css/menu_sideslide.css">
+      <link rel="stylesheet" href="css/owl.carousel.css">
+      <link rel="stylesheet" href="css/font-awesome.css">
+      <link rel="stylesheet" href="css/ent-style.css">
+      <link rel="stylesheet" href="css/login.css">
+      <link rel="stylesheet" href="css/jquery-ui.css">
+      <link rel="stylesheet" href="css/jquery.datetimepicker.css">
+      <link rel="stylesheet" href="css/jquery.fancybox.css">
+      <link rel="stylesheet" href="css/owl.css">
+      <!-- build:js js/lib.js -->
+      <!-- bower:js -->
+      <script src="bower_components/jquery/dist/jquery.js"></script>
+      <script src="bower_components/angular/angular.js"></script>
+      <script src="bower_components/angular-animate/angular-animate.js"></script>
+      <script src="bower_components/toastr/toastr.js"></script>
+      <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+      <script src="bower_components/moment/moment.js"></script>
+      <script src="bower_components/angular-moment/angular-moment.js"></script>
+      <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+      <script src="bower_components/underscore/underscore.js"></script>
+      <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+      <script src="bower_components/angular-route/angular-route.js"></script>
+      <script src="bower_components/angular-resource/angular-resource.js"></script>
+      <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+      <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+      <script src="bower_components/ng-tags-input/ng-tags-input.js"></script>
+      <script src="bower_components/angular-bootstrap-datetimepicker/src/js/datetimepicker.js"></script>
+      <script src="bower_components/angular-plaid-link/src/angular-plaid-link.js"></script>
+      <script src="bower_components/ngCordova/dist/ng-cordova.js"></script>
+      <script src="bower_components/angular-flexslider/angular-flexslider.js"></script>
+      <!--<script src="app/postr/plaid/link-initialize.js"></script>-->
+      <script src="https://cdn.plaid.com/link/stable/link-initialize.js"></script>
+      <!--<script src="bower_components/satellizer/satellizer.js"></script>-->
+      <!-- endbower -->
+      <!-- endbuild -->
+      <!-- build:js js/jsheader.js -->
+      <!-- inject:jsheader:js -->
+      <!--<script src="js/jsheader/angular-plaid.js"></script>-->
+      <script src="js/jsheader/app.module.js"></script>
+      <script src="js/jsheader/ent-script.js"></script>
+      <script src="js/jsheader/mn-touch.js"></script>
+      <script src="js/jsheader/ngGroup.js"></script>
+      <script src="js/jsheader/nprogress.js"></script>
+      <!-- endinject -->
+      <!-- endbuild -->
+      <!--Cordova-->
+      <script src="cordova.js" type="text/javascript" charset="utf-8"></script>
+      <script type="text/javascript">
+         function toggle_visibility(id) {
+           var e = document.getElementById(id);
+           var strClass = jQuery(e).hasClass('open');
+           if (strClass == true)
+             jQuery(e).removeClass('open');
+           else
+             jQuery(e).addClass('open');
+         }
+         
+         $(document).ready(function() {
+           NProgress.start();
+           NProgress.done();
+         });
+      </script>
+   </head>
+   <body>
+       
+       <!--REGISTER SCREEN STARTS HERE-->
+      <div class="wrapper-page">
+      <div class="panel panel-color panel-primary">
+         <div class="panel-heading">
+            <h3 class="text-center m-t-10"><img src="images/plogo.png" /></h3>
+         </div>
+         <form class="form-horizontal m-t-40 login" action="submit">
+            <div class="row">
+               
+                  <div class="col-xs-6">
+                  <div class="form-group">
+                     <input class="form-control" type="text" placeholder="First Name" ng-model="firstName" ng-focus="shakerClass=''" required />
+                  </div>
+               </div>
+               
+                  <div class="col-xs-6">
+                    <div class="form-group">  
+                     <input class="form-control" type="text" placeholder="Last Name" ng-model="lastName" ng-focus="shakerClass=''" required />
+                  </div>
+               </div>
+               
+                  <div class="col-xs-12">
+                    <div class="form-group">  
+                     <input class="form-control" type="email" placeholder="Email" ng-model="email" name="email" ng-focus="shakerClass=''" required />
+                  </div>
+               </div>
+               
+                  <div class="col-xs-12">
+                    <div class="form-group">  
+                     <phonenumber-directive placeholder="myPrompt" model="mobilephone"></phonenumber-directive>
+                  </div>
+               </div>
+               
+                  <div class="col-xs-12">
+                    <div class="form-group">  
+                     <input class="form-control" type="password" placeholder="Password" ng-model="password" ng-focus="shakerClass=''" required />
+                  </div>
+               </div>
+               
+                  <div class="col-xs-12">
+                    <div class="form-group">  
+                     <input class="form-control" type="password" placeholder="Confirm Password" ng-model="confirmpassword" ng-focus="shakerClass=''" required />
+                  </div>
+               </div>
+               <div class="form-group text-right">
+                  <div class="col-xs-12">
+                     <button class="btn btn-purple w-md" type="submit">Sign Up</button>
+                  </div>
+               </div>
+               <div class="or-box">
+                  <span class="or"></span>  
+               </div>
+               <div class="form-group">
+                  <div class="col-sm-12 text-center">
+                     Already have an account with Postr? <a href="login.html" class="sigin_link">Sign in</a>
+                  </div>
+               </div>
+         </form>
+         </div>
+      </div>
+      <!--REGISTER SCREEN ENDS HERE-->      
+          
+      <!--<script src="app.module.js"></script>-->
+      <!-- build:js js/app.js-->
+      <!-- inject:js -->
+      <script src="app.module.js"></script>
+      <script src="app/applic/app.controller.js"></script>
+      <script src="app/board/board.controller.js"></script>
+      <script src="app/board/board.service.js"></script>
+      <script src="app/board/get-board.resource.js"></script>
+      <script src="app/board/get-boards.resource.js"></script>
+      <script src="app/calendar/calendar.controller.js"></script>
+      <script src="app/calendar/calendar.service.js"></script>
+      <script src="app/dropbox/dropbox.controller.js"></script>
+      <script src="app/dropbox/dropbox.js"></script>
+      <script src="app/google-map/google-map.controller.js"></script>
+      <script src="app/google-map/poster-google-map.directive.js"></script>
+      <script src="app/contacts/contacts.service.js"></script>
+      <script src="app/contacts/contacts.controller.js"></script>
+      <script src="app/contacts/angularSlideables.js"></script>
+      <!--<script src="app/login/authInterceptor.js"></script>-->
+      <!--<script src="app/login/datacontext.js"></script>-->
+      <!--<script src="app/login/directives.js"></script>-->
+      <!--<script src="app/login/login.controller.js"></script>-->
+      <script src="app/postr/rss-feed/rss-feed.controller.js"></script>
+      <script src="app/postr/rss-feed/rss-feed.service.js"></script>
+      <script src="app/postr/plaid/plaid.controller.js"></script>
+      <script src="app/postr/plaid/plaid.directive.js"></script>
+      <script src="app/postr/plaid/plaid.service.js"></script>
+      <!--<script src="app/postr/plaid/link-initialize.js"></script>-->
+      <script src="app/postr/rss-feed/postr-rss-feed.directive.js"></script>
+      <script src="app/poster/get-posters.resource.js"></script>
+      <script src="app/poster/poster-checklist.directive.js"></script>
+      <!--<script src="app/poster/poster-gallery-large.directive.js"></script>
+         <script src="app/poster/poster-gallery-six.directive.js"></script>-->
+      <script src="app/poster/poster-mason.directive.js"></script>
+      <script src="app/poster/poster-newsfeed.directive.js"></script>
+      <script src="app/poster/poster-notebook.directive.js"></script>
+      <!--<script src="app/poster/poster-plaid.directive.js"></script>-->
+      <script src="app/poster/poster-spotify.directive.js"></script>
+      <script src="app/poster/poster.service.js"></script>
+      <script src="app/poster/posterNew.service.js"></script>
+      <script src="app/poster/priorityboard-trans.directive.js"></script>
+      <script src="app/applic/notebook/notebook.controller.js"></script>
+      <script src="app/common/constants/constant.service.js"></script>
+      <script src="app/common/services/dataService.js"></script>
+      <script src="app/common/services/dataservicenew.js"></script>
+      <script src="app/common/services/logger.service.js"></script>
+      <script src="app/common/services/validation.service.js"></script>
+      <script src="app/common/services/device.service.js"></script>
+      <script src="app/common/services/ajax-spinner.service.js"></script>
+      <script src="app/common/services/environment.service.js"></script>
+      <script src="app/postr/notebook/postr-notebook.directive.js"></script>
+      <script src="app/postr/notebook/notebook.service.js"></script>
+      <script src="app/postr/notebook/notebook.controller.js"></script>
+      <script src="app/postr/gallery/postr-gallery-large.directive.js"></script>
+      <script src="app/postr/gallery/gallery.service.js"></script>
+      <script src="app/postr/gallery/gallery.controller.js"></script>
+      <script src="app/postr/gallery/gallery-camera.js"></script>
+      <script src="app/postr/list/postr-checklist.directive.js"></script>
+      <script src="app/postr/list/list.service.js"></script>
+      <script src="app/postr/list/list.controller.js"></script>
+      <script src="app/partial-views/header/header.controller.js"></script>
+      <script src="app/partial-views/navigation/navigation-menu.controller.js"></script>
+      <script src="app/partial-views/right-menu/right-menu.controller.js"></script>
+      <script src="app/partial-views/top-menu/top-menu.controller.js"></script>
+      <script src="js/angular-bind-html-compile.directive.js"></script>
+      <!--<script src="js/angular-plaid.js"></script>-->
+      <script src="js/bootstrap-checkbox.js"></script>
+      <script src="js/bootstrap-select.js"></script>
+      <script src="js/bootstrap.file-input.js"></script>
+      <script src="js/bootstrap.js"></script>
+      <script src="js/classie.js"></script>
+      <script src="js/cordova-file.provider.js"></script>
+      <script src="js/jquery-ui.js"></script>
+      <script src="js/jquery.datetimepicker.js"></script>
+      <script src="js/jquery.fancybox.js"></script>
+      <script src="js/jquery.flexslider.js"></script>
+      <script src="js/jquery.mCustomScrollbar.min.js"></script>
+      <script src="js/jquery.tablesorter.js"></script>
+      <script src="js/main.js"></script>
+      <script src="js/ng-infinite-scroll.min.js"></script>
+      <script src="js/owl.carousel.js"></script>
+      <!--<script src="js/plaid.controller.js"></script>-->
+      <!--<script src="js/plaid.service.js"></script>-->
+      <script src="js/tagmanager.js"></script>
+      <script src="js/google-maps/attr2_options.js"></script>
+      <script src="js/google-maps/directions.js"></script>
+      <script src="js/google-maps/geo_coder.js"></script>
+      <script src="js/google-maps/map.js"></script>
+      <script src="js/google-maps/map_controller.js"></script>
+      <script src="js/google-maps/navigator_geolocation.js"></script>
+      <script src="js/google-maps/street_view.js"></script>
+      <script src="js/jsbottom/masonry.pkgd.min.js"></script>
+      <!--<script src="js/plaid/angular-plaid.js"></script>-->
+      <!--<script src="js/plaid/plaid.controller.js"></script>-->
+      <!--<script src="js/plaid/plaid.service.js"></script>-->
+      <script src="app/login-signup/login-signup.service.js"></script>
+      <script src="app/login-signup/alert.js"></script>
+      <!--<script src="app/login-signup/auth.js"></script>-->
+      <script src="app/login-signup/authInterceptor.js"></script>
+      <script src="app/login-signup/authtoken.js"></script>
+      <script src="app/login-signup/aesjs.js"></script>
+      <script src="app/login-signup/aesInterceptor.js"></script>
+      <script src="app/login-signup/verification.resource.js"></script>
+      <script src="app/login-signup/user-auth-token.service.js"></script>
+      <!-- endinject -->
+      <!-- inject:templates:js -->
+      <!-- endinject -->
+      <!-- endbuild -->
+      <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.1.62/jquery.inputmask.bundle.js"></script>-->
+      <script src="app/common/directives/phonenumber-mask.directive.js"></script>
+      <script src="app/common/directives/integernumber-mask.directive.js"></script>
+      <script src="app/common/directives/enter-key.directive.js"></script>
+      <script src="https://maps.googleapis.com/maps/api/js"></script>
+      <script type="text/javascript" charset="utf-8">
+         // Wait for device API libraries to load needed here possibly
+         //
+         function onLoad() {
+           document.addEventListener("deviceready", onDeviceReady, false);
+         }
+         
+         // device APIs are available
+         //
+         function onDeviceReady() {
+         
+           if (navigator && navigator.splashscreen)
+             navigator.splashscreen.hide();
+         
+           //    navigator.splashscreen.hide(); //Hides the splash screen for your app. This must be there
+         
+           if (window.StatusBar) {
+             //    StatusBar.backgroundColorByHexString("#CC1100");
+             StatusBar.backgroundColorByHexString("#f84647");
+             // Now safe to use device APIs
+           }
+         }
+      </script>
+      <style>
+         .fancybox-close {
+         top: 0;
+         right: 0;
+         }
+      </style>
+      <script type="text/javascript">
+         $(document).ready(function() {
+           $('.popupxx-link').fancybox({
+             width: 650,
+             autoSize: false,
+             autoHeight: true,
+             scrolling: 'yes',
+             closeBtn: true,
+           });
+           $(".acc-main").accordion({
+             heightStyle: "content",
+             clearStyle: true
+           });
+           $(".tm-input").tagsManager();
+           $('.selectpicker').selectpicker();
+           $('.checkbox').checkbox();
+           $('.file').bootstrapFileInput();
+           $('#datetimepicker1').datetimepicker({
+             timepicker: false,
+             format: 'd/m/Y',
+             formatDate: 'd/m/Y'
+           });
+         });
+      </script>
+      <!-- build:js js/jsbottom.js -->
+      <!-- inject:jsbottom:js -->
+      <script src="js/jsbottom/masonry.pkgd.min.js"></script>
+      <!-- endinject -->
+      <!-- endbuild -->
+      <script type="text/javascript">
+         // used for responsive tiles
+         $(window).load(function() {
+           var container = document.querySelector('.home-posts .post-boxes');
+           var msnry = new Masonry(container, {
+             itemSelector: '.item-post-box',
+             gutter: 0
+           });
+         });
+         
+         
+         // used for shaking buttons login, sign up
+         $(document).click(function() {
+           $(".toggler").effect("shake", {
+             times: 3
+           }, 1000);
+         });
+      </script>
+   </body>
+</html>
